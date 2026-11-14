@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import dotenv from 'dotenv';
-import { createServer as createViteServer } from 'vite';
+
 import { GoogleGenAI, Type } from '@google/genai';
 import {
   DESTINATIONS,
@@ -32,7 +32,7 @@ import type {
 dotenv.config();
 
 const PORT = 3000;
-const DATA_DIR = path.resolve(process.cwd(), '.data');
+const DATA_DIR = process.env.VERCEL ? '/tmp' : path.resolve(process.cwd(), '.data');
 const DB_PATH = path.join(DATA_DIR, 'careconnect-db.json');
 const TOKEN_SECRET = process.env.SESSION_SECRET || 'ethaum-careconnect-dev-secret-2026';
 
@@ -693,7 +693,7 @@ function getGeminiClient(): GoogleGenAI | null {
   });
 }
 
-async function startServer() {
+export function createApiApp() {
   let db = loadDb();
   const app = express();
   app.use(express.json({ limit: '5mb' }));
@@ -1819,8 +1819,15 @@ CRITICAL SAFETY RULES:
     });
   });
 
+  return app;
+}
+
+async function startServer() {
+  const app = createApiApp();
+
   // Vite dev middleware or static production build
   if (process.env.NODE_ENV !== 'production') {
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
@@ -1839,4 +1846,6 @@ CRITICAL SAFETY RULES:
   });
 }
 
-startServer();
+if (!process.env.VERCEL) {
+  startServer();
+}
