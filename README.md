@@ -1,111 +1,245 @@
-# EthAum CareConnect — Healthcare Without Borders
+<div align="center">
 
-**AI-Powered International Medical Tourism Marketplace**  
+# 🌐 EthAum CareConnect — Healthcare Without Borders
+### AI-Powered Next-Gen Cross-Border Medical Tourism & Care Coordination Platform
+
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20on%20Vercel-38DDF5?style=for-the-badge&logo=vercel)](https://eth-aum-care-connect-ai-powered-med.vercel.app)
+[![React 19](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Three.js](https://img.shields.io/badge/Three.js-WebGL_3D-black?style=for-the-badge&logo=three.js)](https://threejs.org/)
+[![Google Gemini](https://img.shields.io/badge/Google_Gemini-AI_Powered-8E75C4?style=for-the-badge&logo=google)](https://deepmind.google/technologies/gemini/)
+
 **Hackathon Submission**: EthAum Venture Partners — Building Medical Tourism Platform  
 **Developer**: Tanya Garg · **Team**: Krackcode (Individual Participation)
 
+[Explore Live Demo](https://eth-aum-care-connect-ai-powered-med.vercel.app) · [Report Bug](https://github.com/Tanya-garg10/EthAum-CareConnect-AI-Powered-Medical-Tourism-Platform/issues) · [Request Feature](https://github.com/Tanya-garg10/EthAum-CareConnect-AI-Powered-Medical-Tourism-Platform/issues)
+
+</div>
+
 ---
 
-## 1. Problem Statement
+## 📌 Table of Contents
+- [Problem Statement](#-problem-statement)
+- [Solution Overview](#-solution-overview)
+- [Key Architectural Highlights & Features](#-key-architectural-highlights--features)
+  - [1. Interactive 3D Medical Globe](#1-interactive-3d-medical-globe-globehero3d)
+  - [2. Multi-Role Workspaces](#2-multi-role-workspaces)
+  - [3. AI Intelligence Suite](#3-ai-intelligence-suite)
+  - [4. Explainable Hospital Matchmaking](#4-explainable-hospital-matchmaking)
+  - [5. Transparent Quotation Comparison](#5-transparent-quotation-comparison)
+  - [6. Granular Patient Data Sovereignty](#6-granular-patient-data-sovereignty)
+- [Demo Credentials](#-demo-credentials-seeded-for-evaluation)
+- [Tech Stack & Architecture](#-tech-stack--architecture)
+- [Project Directory Structure](#-project-directory-structure)
+- [Local Setup & Development](#-local-setup--development)
+- [Deployment Guide](#-deployment-guide)
+- [Business & Monetization Model](#-business--monetization-model)
+- [Security & Compliance](#-security--compliance)
 
-Patients seeking cross-border specialized procedures face fragmented hospital directories, opaque package pricing, unverified clinic claims, unstructured medical records scattered across formats, and disconnected communication with international hospital coordinators. Meanwhile, partner hospitals receive incomplete patient enquiries lacking structured history or pre-screening readiness.
+---
 
-## 2. Solution Overview
+## 🚨 Problem Statement
 
-**EthAum CareConnect** unifies global healthcare discovery, AI-assisted non-diagnostic intake organization, explainable hospital matching, patient-controlled document consent, transparent side-by-side quotation comparison, virtual consultation scheduling, and a 14-stage patient journey tracker into one cohesive full-stack web platform.
+Patients pursuing specialized cross-border healthcare face critical friction points:
+- **Opaque Pricing & Hidden Costs**: Hospital packages vary widely with unpredictable add-on fees.
+- **Fragmented Directories**: Difficult to verify medical accreditations (JCI, NABH, ISO) and surgeon credentials across borders.
+- **Unstructured Records**: Medical histories, DICOM imaging, and pathology reports scattered across PDFs, emails, and messaging apps.
+- **Coordination Breakdown**: Language barriers, time-zone disconnects, and unorganized intake packages slow down international patient desks.
 
-## 3. Core Features
+---
 
-- **Interactive 3D Global Healthcare Network (`GlobeHero3D`)**: Pure Three.js WebGL medical globe with procedural Earth cartography, atmospheric Fresnel shell, orbital hologram rings, clickable destination markers across 6 medical corridors (Singapore, India, Germany, Turkey, UAE, Thailand), animated Bezier network packets, software-WebGL frame pacing, and 2D SVG fallback.
-- **Role-Based Authentication (`AuthPortal`)**: Split-screen authentication supporting **Patient**, **Healthcare Provider**, and **Admin** roles with `scrypt` salted password hashing and HMAC-SHA256 bearer tokens.
-- **11-Module Patient Workspace (`PatientDashboard`)**:
-  - **7-Step Medical Case Creation Wizard**: Structured intake generating unique `CC-2026-XXXX` case references.
-  - **AI Case Assistant**: Server-side `@google/genai` (`gemini-4-hydrogen`) integration for non-diagnostic administrative intake, document indexing, and missing paperwork detection (with automatic Demo Mode fallback).
-  - **Smart Hospital Discovery**: Explainable multi-factor logistical matching across specialty, budget fit, language, accreditation, and wait time.
-  - **Doctor Directory**: Searchable specialist profiles clearly distinguishing verified registry records from sample listings.
-  - **Side-by-Side Quotation Comparison**: Neutral comparison across estimated price, included/excluded services, medications, diagnostics, accommodation, duration, validity, payment conditions, cancellation terms, and saved comparisons.
-  - **Medical Records & Granular Consent**: File validation (max 10 MB), document versioning (`v1.0`, `v1.1`), preview modal, per-hospital sharing toggles, and deletion requests.
-  - **Appointments, Coordinator Messages & 14-Stage Journey Tracker**.
-- **Provider Portal (`ProviderDashboard`)**:
-  - **10-Stage Lead Pipeline** (`New` → `Qualified` → `Medical Review` → `Quote Requested` → `Quote Sent` → `Consultation` → `Booked` → `Treatment` → `Aftercare` → `Closed`).
-  - **Consent-Gated Patient Records**: Providers only see records explicitly shared with their hospital.
-  - **Itemized Quotation Builder**: Publishes transparent quotes directly into patient comparison tables.
-- **Admin Operations Console (`AdminDashboard`)**:
-  - Platform overview metrics, patient directory, provider verification queue, cases & enquiries, **5% Referral Commission Ledger**, marketplace analytics funnel, and security audit log.
+## 💡 Solution Overview
 
-## 4. Technology Stack
+**EthAum CareConnect** bridges global patients and accredited international medical centers via a unified, AI-orchestrated ecosystem:
+- **Explainable Discovery**: Match based on budget, clinical specialty, accreditation, and wait times.
+- **AI-Assisted Intake**: Non-diagnostic intake synthesis, document indexing, and missing paperwork detection powered by Google Gemini.
+- **Patient Sovereignty**: Explicit, revocable per-hospital document sharing consent.
+- **Transparent Comparison**: Granular side-by-side package analysis (inclusions, exclusions, stay lengths, cancellations).
+- **End-to-End Tracking**: A structured 14-stage journey from inquiry to post-op international aftercare.
 
-- **Frontend**: React 19, TypeScript, Tailwind CSS v4, Three.js, Motion, Lucide React
-- **Authentication & Database**: Firebase Authentication (Google Sign-In via `signInWithPopup`), Cloud Firestore (`firebase-blueprint.json` + ESLint-audited `firestore.rules`), plus Express `scrypt` + HMAC session tokens & local `.data/careconnect-db.json` demo persistence
-- **Backend**: Node.js, Express, `tsx`, rate limiting, Identity Toolkit token verification
-- **AI Integration**: `@google/genai` (`gemini-4-hydrogen`) via server-side `/api/ai/*` routes
+---
 
-## 5. Project Structure
+## 🌟 Key Architectural Highlights & Features
+
+### 1. Interactive 3D Medical Globe (`GlobeHero3D`)
+- Pure **Three.js** & **@react-three/fiber** WebGL Earth with custom procedural shaders.
+- Atmospheric Fresnel glow shell, rotating orbital hologram telemetry rings, and particle starfields.
+- **6 Active International Medical Corridors**: Singapore, New Delhi, Munich, Bangkok, Istanbul, Dubai.
+- Dynamic camera glide animation upon hub selection, interactive click proxies, and responsive 2D SVG fallback.
+
+### 2. Multi-Role Workspaces
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        EthAum CareConnect                              │
+└────────────────────────────────────┬───────────────────────────────────┘
+                                     │
+         ┌───────────────────────────┼───────────────────────────┐
+         ▼                           ▼                           ▼
+ 👤 Patient Portal           🏥 Provider Desk            🛡️ Admin Console
+ • 7-Step Case Intake        • 10-Stage Lead Pipeline    • Platform KPIs & Metrics
+ • Multi-Factor Matching     • Consent-Gated Records     • Provider Verification
+ • Side-by-Side Quotes       • Itemized Quote Builder    • 5% Commission Ledger
+ • Granular Document Vault   • Direct Messaging          • Security Audit Logs
+ • 14-Stage Journey Tracker  • Video Consult Desk        • Dispute & Inquiry Center
+```
+
+### 3. AI Intelligence Suite
+- **Intake Assistant**: Structures patient narrative into non-diagnostic clinical summaries with missing item alerts.
+- **Document Metadata Extraction**: Automated indexing of radiology, pathology, and cardiology records.
+- **Consultation Prep**: Generates high-yield questions for patients to ask their overseas surgeons.
+- **Zero-Crash Resilience**: Automatic fallback to structured offline synthesis if external API quotas are unavailable.
+
+### 4. Explainable Hospital Matchmaking
+Transparent multi-weighted mathematical ranking formula:
+$$\text{Match Score} = (0.34 \times \text{Specialty}) + (0.24 \times \text{Budget Fit}) + (0.16 \times \text{Language}) + (0.14 \times \text{Accreditation}) + (0.12 \times \text{Availability})$$
+Every score displays a human-readable justification breaking down exactly why a hospital is recommended.
+
+### 5. Transparent Quotation Comparison
+- Compare up to 4 hospital quotations side-by-side.
+- Granular breakdown: Surgery, Inpatient Room Tier, ICU Days, Diagnostics, Airport Transfers, Anticoagulant/Meds inclusions, and Cancellation/Escrow Terms.
+
+### 6. Granular Patient Data Sovereignty
+- Patients maintain complete ownership of their health data.
+- Records are hidden by default; sharing requires explicit per-hospital consent toggles.
+- Instant consent revocation and audit-logged deletion requests.
+
+---
+
+## 🔑 Demo Credentials (Seeded for Evaluation)
+
+Explore any role instantly without creating a new account:
+
+| Portal | Role | Email | Password | Access Highlights |
+| :--- | :--- | :--- | :--- | :--- |
+| **Patient Portal** | Patient | `patient@careconnect.demo` | `CareDemo2026!` | Active Case `CC-2026-4101`, Quote Comparison, Document Vault |
+| **Provider Desk** | Hospital Desk | `provider@careconnect.demo` | `CareDemo2026!` | Novena Heart Center, Lead Kanban, Quote Publishing |
+| **Admin Console** | Platform Ops | `admin@careconnect.demo` | `CareDemo2026!` | Referral Ledger, Verification Queue, Audit Trail |
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | React 19, TypeScript, Tailwind CSS v4, Motion, Lucide Icons |
+| **3D Graphics** | Three.js, @react-three/fiber, @react-three/drei, GLSL Shaders |
+| **Backend API** | Express.js, Node.js, Vercel Serverless Functions |
+| **Security & Auth** | PBKDF2/scrypt Salted Hashes, Timing-Safe HMAC-SHA256 Tokens, Rate Limiting |
+| **AI Engine** | Google Gemini (`@google/genai`) with offline administrative fallback |
+| **Persistence** | File-backed JSON schema store with audit trails + Cloud Firestore schema blueprint |
+| **Deployment** | Vercel (CI/CD Automated Deployments) |
+
+---
+
+## 📂 Project Directory Structure
 
 ```text
-├── firebase-applet-config.json     # Provisioned Firebase Web & Firestore config
-├── firebase-blueprint.json         # Strict Firestore entity & path Intermediate Representation
-├── firestore.rules                 # Hardened ABAC / RBAC Firestore security rules
-├── eslint.config.mjs               # @firebase/eslint-plugin-security-rules audit config
-├── server.ts                       # Express API, auth, rate limiting, Gemini proxy & persistence
+careconnect/
+├── api/
+│   └── index.ts                     # Vercel Serverless entry point
+├── public/
+│   └── images/                      # Optimized medical center & procedure assets
 ├── src/
-│   ├── App.tsx                     # Role-based router (Landing, Auth, Patient, Provider, Admin)
-│   ├── lib/firebase.ts             # Firebase App, Auth, Firestore connection probe & sync helpers
-│   ├── types.ts                    # Shared TypeScript interfaces
-│   ├── data/seedData.ts            # 10 treatments, 6 destinations, 8 sample hospitals, 6 doctors
-│   └── components/
-│       ├── LandingPage.tsx         # 3D Hero, Treatment Explorer, Destinations, 8-Step Flow, FAQ
-│       ├── GlobeHero3D.tsx         # Pure Three.js WebGL interactive globe + SVG fallback
-│       ├── AiIntelligenceVisual.tsx# 5-node AI architectural flow diagram
-│       ├── AuthPortal.tsx          # Split-screen Google Firebase Auth, Sign In & Register
-│       ├── CaseCreationWizard.tsx  # 7-step cross-border medical case wizard
-│       ├── PatientDashboard.tsx    # 11-module patient workspace
-│       ├── ProviderDashboard.tsx   # 9-module hospital provider desk
-│       └── AdminDashboard.tsx      # 7-tab admin analytics, verification & referral ledger
+│   ├── components/
+│   │   ├── AdminDashboard.tsx       # Platform governance, audit log, referral ledger
+│   │   ├── AiIntelligenceVisual.tsx # 5-Node AI orchestration architectural graphic
+│   │   ├── AuthPortal.tsx           # Split-screen role authentication & onboarding
+│   │   ├── CaseCreationWizard.tsx   # 7-Step cross-border medical intake wizard
+│   │   ├── GlobeHero3D.tsx          # Pure Three.js WebGL globe & orbital corridors
+│   │   ├── LandingPage.tsx          # Public marketing page, treatment catalog & FAQ
+│   │   ├── PatientDashboard.tsx     # 11-module patient journey & quotes workspace
+│   │   └── ProviderDashboard.tsx    # 10-stage hospital lead pipeline & quote builder
+│   ├── data/
+│   │   └── seedData.ts              # Accredited hospitals, procedures & sample records
+│   ├── lib/
+│   │   └── firebase.ts              # Firebase client SDK & Firestore sync bridge
+│   ├── types.ts                     # Strict TypeScript interfaces across all domain entities
+│   ├── App.tsx                      # Root role-based routing orchestrator
+│   └── main.tsx                     # React 19 application mount
+├── server.ts                        # Express REST API, auth middleware & AI proxies
+├── vercel.json                      # Vercel serverless routing & build rewrites
+├── package.json                     # Project manifest & dependency configuration
+└── vite.config.ts                   # Vite bundler & Tailwind v4 setup
 ```
 
-## 6. Firebase & Local Setup
+---
 
+## 💻 Local Setup & Development
+
+### Prerequisites
+- Node.js ≥ 20.x or [Bun](https://bun.sh/)
+- Git
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Tanya-garg10/EthAum-CareConnect-AI-Powered-Medical-Tourism-Platform.git
+cd EthAum-CareConnect-AI-Powered-Medical-Tourism-Platform
+```
+
+### 2. Install dependencies
 ```bash
 npm install
+# or
+bun install
+```
+
+### 3. Configure environment variables (Optional)
+Create a `.env` file in the root directory:
+```env
+PORT=3000
+SESSION_SECRET=your-custom-hmac-secret-key
+GEMINI_API_KEY=your-gemini-api-key # Optional: activates live Gemini responses
+```
+
+### 4. Start development server
+```bash
 npm run dev
+# or
+bun run dev
 ```
+Visit `http://localhost:3000` in your browser.
 
-For production build & start:
+---
 
-```bash
-npm run build
-npm start
-```
+## 🚀 Deployment Guide
 
-Audit Firestore security rules with:
+### Deploying to Vercel (One-Click)
 
-```bash
-npx eslint firestore.rules
-```
+This project is pre-configured with [vercel.json](file:///c:/Users/arpan/Downloads/careconnect/vercel.json) to deploy both the static React frontend and Express serverless API routes seamlessly.
 
-Optional environment secrets (`.env`):
-- `GEMINI_API_KEY`: Enables live Gemini responses on `/api/ai/*` (falls back to Demo Mode automatically when absent).
-- `SESSION_SECRET`: Signing key for HMAC session tokens.
+1. Push your code to GitHub.
+2. Import the repository into **[Vercel](https://vercel.com/)**.
+3. Set Framework Preset to **Vite**.
+4. Set Build Command to: `npm run build`
+5. Set Output Directory to: `dist`
+6. Click **Deploy**.
 
-## 7. Demo Credentials (Seeded Environment)
+---
 
-- **Patient Portal**: `patient@careconnect.demo` / `CareDemo2026!`
-- **Provider Portal**: `provider@careconnect.demo` / `CareDemo2026!`
-- **Admin Console**: `admin@careconnect.demo` / `CareDemo2026!`
+## 💰 Business & Monetization Model
 
-## 8. Business Model & Referral Commission
+EthAum CareConnect operates on a strictly neutral, outcome-aligned marketplace framework:
 
-EthAum CareConnect operates on a transparent marketplace model featuring an integration-ready **5% Referral Commission Ledger** applied solely to eligible billed amounts upon verified treatment booking and completion—never altering patient quote rankings or clinical comparisons.
+- **5% Referral Commission Ledger**: Transparent success fee applied solely to verified, completed international procedures.
+- **Zero Pay-to-Rank Bias**: Hospital match scores are calculated purely on objective patient criteria (specialty, budget, language, accreditation)—never influenced by sponsorship or ad spend.
+- **Direct Hospital SaaS Tiers**: Optional premium coordinator workflow tools and tele-health consultation suite subscriptions for international hospital desks.
 
-## 9. Security, Privacy & Clinical Safety Boundaries
+---
 
-- **Non-Diagnostic AI**: CareConnect AI organizes administrative records and missing paperwork only; it never diagnoses, prescribes, or replaces licensed doctors.
-- **Granular Patient Consent**: Medical documents remain private by default and are exposed only to hospitals explicitly consented by the patient.
-- **Transparent Sample Labelling**: Demonstration hospitals, doctors, quotes, and analytics figures are clearly marked as sample/fictional data.
+## 🛡️ Security & Compliance
 
-## 10. Future Roadmap
+- **Rate Limiting**: Built-in IP rate limiters on sensitive endpoints (`/api/auth/*`, `/api/contact`, `/api/ai/*`).
+- **Timing-Safe Auth**: Constant-time HMAC comparison prevents timing attacks.
+- **Cryptographic Hashing**: Scrypt key derivation with per-user unique random salts.
+- **Non-Diagnostic AI Guardrails**: Strict administrative prompt framing preventing automated medical advice or diagnosis.
 
-- Live FHIR / HL7 hospital EHR connectors and DICOM viewer integration
-- Escrow-backed multi-currency milestone payments and travel visa API integrations
-- Verified clinical credential registry webhooks (JCI / NABH / TEMOS live sync)
+---
+
+<div align="center">
+
+Made with ❤️ for the **EthAum Venture Partners Hackathon**  
+*Empowering patients worldwide with transparent, accessible, and dignified healthcare.*
+
+</div>
