@@ -18,7 +18,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['TAVR / Valve Replacement', 'Minimally Invasive CABG', 'Atrial Fibrillation Ablation'],
     typicalStayDays: '7–14 days',
     indicativeRangeUsd: '$11,500 – $28,000',
-    imageUrl: '/src/assets/images/treatment_cardiology_suite_1794585247734.jpg',
+    imageUrl: '/images/treatment_cardiology_suite_1794585247734.jpg',
     accentColor: '#38DDF5',
   },
   {
@@ -31,7 +31,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['Proton Beam Therapy', 'Robotic Oncologic Resection', 'Genomic Targeted Protocol'],
     typicalStayDays: '14–28 days',
     indicativeRangeUsd: '$18,000 – $54,000',
-    imageUrl: '/src/assets/images/treatment_oncology_lab_1794585247733.jpg',
+    imageUrl: '/images/treatment_oncology_lab_1794585247733.jpg',
     accentColor: '#A78BFA',
   },
   {
@@ -44,7 +44,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['MAKO Robotic Knee Replacement', 'Total Hip Arthroplasty', 'Minimally Invasive Spine Decompression'],
     typicalStayDays: '6–12 days',
     indicativeRangeUsd: '$8,200 – $19,500',
-    imageUrl: '/src/assets/images/treatment_orthopedics_robotics_1794585249569.jpg',
+    imageUrl: '/images/treatment_orthopedics_robotics_1794585249569.jpg',
     accentColor: '#38DDF5',
   },
   {
@@ -57,7 +57,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['Deep Brain Stimulation (DBS)', 'Gamma Knife Radiosurgery', 'Cervical Disc Microsurgery'],
     typicalStayDays: '7–16 days',
     indicativeRangeUsd: '$14,000 – $36,000',
-    imageUrl: '/src/assets/images/treatment_orthopedics_robotics_1794585249569.jpg',
+    imageUrl: '/images/treatment_orthopedics_robotics_1794585249569.jpg',
     accentColor: '#3678FF',
   },
   {
@@ -70,7 +70,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['Microvascular Reconstruction', 'Deep-Plane Facial Rejuvenation', 'Functional Rhinoplasty'],
     typicalStayDays: '5–10 days',
     indicativeRangeUsd: '$4,800 – $14,500',
-    imageUrl: '/src/assets/images/hospital_europe_institute_1794585250165.jpg',
+    imageUrl: '/images/hospital_europe_institute_1794585250165.jpg',
     accentColor: '#A78BFA',
   },
   {
@@ -83,7 +83,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['All-on-4 Titanium/Zirconia Arch', 'Orthognathic Jaw Alignment', 'Digital Smile Rehabilitation'],
     typicalStayDays: '4–8 days',
     indicativeRangeUsd: '$3,200 – $9,800',
-    imageUrl: '/src/assets/images/hospital_singapore_center_1794585249595.jpg',
+    imageUrl: '/images/hospital_singapore_center_1794585249595.jpg',
     accentColor: '#38DDF5',
   },
   {
@@ -96,7 +96,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['IVF / ICSI Cycle', 'PGT-A Genetic Screening', 'Oocyte Cryopreservation'],
     typicalStayDays: '12–18 days',
     indicativeRangeUsd: '$4,500 – $11,200',
-    imageUrl: '/src/assets/images/treatment_oncology_lab_1794585247733.jpg',
+    imageUrl: '/images/treatment_oncology_lab_1794585247733.jpg',
     accentColor: '#A78BFA',
   },
   {
@@ -109,7 +109,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['Femto-LASIK / ReLEx SMILE', 'Multifocal IOL Cataract Surgery', 'Vitreoretinal Repair'],
     typicalStayDays: '3–6 days',
     indicativeRangeUsd: '$2,100 – $6,400',
-    imageUrl: '/src/assets/images/treatment_cardiology_suite_1794585247734.jpg',
+    imageUrl: '/images/treatment_cardiology_suite_1794585247734.jpg',
     accentColor: '#38DDF5',
   },
   {
@@ -122,7 +122,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['HPB Tumor Resection', 'Living-Donor Evaluation Protocol', 'Complex Biliary Reconstruction'],
     typicalStayDays: '14–30 days',
     indicativeRangeUsd: '$26,000 – $62,000',
-    imageUrl: '/src/assets/images/hospital_singapore_center_1794585249595.jpg',
+    imageUrl: '/images/hospital_singapore_center_1794585249595.jpg',
     accentColor: '#3678FF',
   },
   {
@@ -135,7 +135,7 @@ export const TREATMENTS: TreatmentCategory[] = [
     procedures: ['Laparoscopic Sleeve Gastrectomy', 'Roux-en-Y Gastric Bypass', 'Metabolic Nutrition Program'],
     typicalStayDays: '5–9 days',
     indicativeRangeUsd: '$5,500 – $13,800',
-    imageUrl: '/src/assets/images/hospital_europe_institute_1794585250165.jpg',
+    imageUrl: '/images/hospital_europe_institute_1794585250165.jpg',
     accentColor: '#38DDF5',
   },
 ];
@@ -153,7 +153,7 @@ export const DESTINATIONS: DestinationHub[] = [
     avgCostAdvantage: 'Indicative: $16,000 – $48,000',
     accreditationCount: 14,
     summary: 'Asia-Pacific hub for complex oncology, proton therapy, and multilingual international patient coordination.',
-    imageUrl: '/src/assets/images/hospital_singapore_center_1794585249595.jpg',
+    imageUrl: '/images/hospital_singapore_center_1794585249595.jpg',
   },
   {
     id: 'hub-de',
@@ -167,7 +167,7 @@ export const DESTINATIONS: DestinationHub[] = [
     avgCostAdvantage: 'Indicative: $13,000 – $38,000',
     accreditationCount: 19,
     summary: 'European surgical centers featuring structured inpatient rehabilitation and multilingual medical liaison desks.',
-    imageUrl: '/src/assets/images/hospital_europe_institute_1794585250165.jpg',
+    imageUrl: '/images/hospital_europe_institute_1794585250165.jpg',
   },
   {
     id: 'hub-in',
@@ -181,7 +181,7 @@ export const DESTINATIONS: DestinationHub[] = [
     avgCostAdvantage: 'Indicative: $6,500 – $22,000',
     accreditationCount: 24,
     summary: 'High-volume cardiac, transplant, and robotic orthopedic institutes with dedicated international coordinator teams.',
-    imageUrl: '/src/assets/images/treatment_cardiology_suite_1794585247734.jpg',
+    imageUrl: '/images/treatment_cardiology_suite_1794585247734.jpg',
   },
   {
     id: 'hub-tr',
@@ -195,7 +195,7 @@ export const DESTINATIONS: DestinationHub[] = [
     avgCostAdvantage: 'Indicative: $3,800 – $19,000',
     accreditationCount: 18,
     summary: 'Europe–MENA cross-border gateway offering oncology hospitals, hair/facial reconstruction, and digital dental clinics.',
-    imageUrl: '/src/assets/images/treatment_oncology_lab_1794585247733.jpg',
+    imageUrl: '/images/treatment_oncology_lab_1794585247733.jpg',
   },
   {
     id: 'hub-th',
@@ -209,7 +209,7 @@ export const DESTINATIONS: DestinationHub[] = [
     avgCostAdvantage: 'Indicative: $5,500 – $21,000',
     accreditationCount: 16,
     summary: 'Hospitality-grade inpatient recovery combined with robotic joint centers and comprehensive interpreter services.',
-    imageUrl: '/src/assets/images/treatment_orthopedics_robotics_1794585249569.jpg',
+    imageUrl: '/images/treatment_orthopedics_robotics_1794585249569.jpg',
   },
   {
     id: 'hub-kr',
@@ -224,7 +224,7 @@ export const DESTINATIONS: DestinationHub[] = [
     accreditationCount: 15,
     summary: 'AI-assisted imaging workflows, minimally invasive robotic surgery, and digital craniofacial laboratories.',
     travelInfo: 'Incheon International Airport (ICN) medical concierge lanes · e-KETA / Medical Visa desk · 15–30 day post-op hotel recovery options.',
-    imageUrl: '/src/assets/images/hospital_singapore_center_1794585249595.jpg',
+    imageUrl: '/images/hospital_singapore_center_1794585249595.jpg',
   },
   {
     id: 'hub-ae',
@@ -239,7 +239,7 @@ export const DESTINATIONS: DestinationHub[] = [
     accreditationCount: 17,
     summary: 'MENA international crossroads offering multilingual private surgical suites, fertility laboratories, and rapid direct-flight connectivity.',
     travelInfo: '20 min from Dubai International (DXB) · Dedicated medical tourist visa extensions · Arabic/English interpreter triage.',
-    imageUrl: '/src/assets/images/hospital_europe_institute_1794585250165.jpg',
+    imageUrl: '/images/hospital_europe_institute_1794585250165.jpg',
   },
 ];
 
@@ -262,7 +262,7 @@ export const HOSPITALS: HospitalProfile[] = [
     facilities: ['Hybrid Cath Lab', 'Proton Gantry Bay', '18-Bed Cardiac ICU', 'Private Recovery Wing'],
     bedCapacity: 420,
     internationalDesk: true,
-    imageUrl: '/src/assets/images/hospital_singapore_center_1794585249595.jpg',
+    imageUrl: '/images/hospital_singapore_center_1794585249595.jpg',
     description: 'Fictional demonstration quaternary cardiac and proton oncology center serving cross-border patients across APAC and EMEA.',
   },
   {
@@ -283,7 +283,7 @@ export const HOSPITALS: HospitalProfile[] = [
     facilities: ['MAKO Robotic Suite', 'Intraoperative 3T MRI', 'Hydrotherapy Rehab Pool'],
     bedCapacity: 310,
     internationalDesk: true,
-    imageUrl: '/src/assets/images/hospital_europe_institute_1794585250165.jpg',
+    imageUrl: '/images/hospital_europe_institute_1794585250165.jpg',
     description: 'Fictional demonstration European center of excellence for navigation-guided spine, joint reconstruction, and functional neurosurgery.',
   },
   {
@@ -304,7 +304,7 @@ export const HOSPITALS: HospitalProfile[] = [
     facilities: ['Biplane Cardiac Suite', 'Robotic Joint Theater', '32-Bed CTVS ICU'],
     bedCapacity: 680,
     internationalDesk: true,
-    imageUrl: '/src/assets/images/treatment_cardiology_suite_1794585247734.jpg',
+    imageUrl: '/images/treatment_cardiology_suite_1794585247734.jpg',
     description: 'Fictional demonstration structural heart and robotic joint institute built for transparent cross-border cardiac care.',
   },
   {
@@ -325,7 +325,7 @@ export const HOSPITALS: HospitalProfile[] = [
     facilities: ['CAD/CAM Ceramic Lab', 'Robotic Surgical Suite', 'Outpatient Recovery Suites'],
     bedCapacity: 260,
     internationalDesk: true,
-    imageUrl: '/src/assets/images/treatment_oncology_lab_1794585247733.jpg',
+    imageUrl: '/images/treatment_oncology_lab_1794585247733.jpg',
     description: 'Fictional demonstration integrated oncology and digital maxillofacial hospital serving patients across Europe and MENA.',
   },
   {
@@ -346,7 +346,7 @@ export const HOSPITALS: HospitalProfile[] = [
     facilities: ['Robotic Arthroplasty Bay', 'Embryology Cleanroom', 'Rehabilitation Gymnasium'],
     bedCapacity: 510,
     internationalDesk: true,
-    imageUrl: '/src/assets/images/treatment_orthopedics_robotics_1794585249569.jpg',
+    imageUrl: '/images/treatment_orthopedics_robotics_1794585249569.jpg',
     description: 'Fictional demonstration tertiary hospital pairing robotic joint surgery with dedicated post-operative rehabilitation.',
   },
   {
@@ -367,7 +367,7 @@ export const HOSPITALS: HospitalProfile[] = [
     facilities: ['Gamma Knife Suite', '3D Craniofacial Lab', 'Micro-Ophthalmic Theater'],
     bedCapacity: 195,
     internationalDesk: true,
-    imageUrl: '/src/assets/images/hospital_singapore_center_1794585249595.jpg',
+    imageUrl: '/images/hospital_singapore_center_1794585249595.jpg',
     description: 'Fictional demonstration microsurgical, craniofacial, and stereotactic neurology center in Seoul.',
   },
   {
@@ -388,7 +388,7 @@ export const HOSPITALS: HospitalProfile[] = [
     facilities: ['Laparoscopic Bariatric Suite', 'Femtosecond Laser Wing', 'Metabolic Clinic'],
     bedCapacity: 240,
     internationalDesk: true,
-    imageUrl: '/src/assets/images/treatment_cardiology_suite_1794585247734.jpg',
+    imageUrl: '/images/treatment_cardiology_suite_1794585247734.jpg',
     description: 'Fictional demonstration metabolic, bariatric, and micro-vision surgical institute.',
   },
   {
@@ -409,7 +409,7 @@ export const HOSPITALS: HospitalProfile[] = [
     facilities: ['Carbon/Proton Beam Bay', 'NGS Sequencing Lab', 'HPB Surgical ICU'],
     bedCapacity: 280,
     internationalDesk: true,
-    imageUrl: '/src/assets/images/hospital_europe_institute_1794585250165.jpg',
+    imageUrl: '/images/hospital_europe_institute_1794585250165.jpg',
     description: 'Fictional demonstration European precision oncology and molecular tumor board pavilion.',
   },
   {
@@ -431,7 +431,7 @@ export const HOSPITALS: HospitalProfile[] = [
     bedCapacity: 350,
     internationalDesk: true,
     availableSlots: ['2026-11-18T10:00', '2026-11-19T14:30', '2026-11-21T09:00'],
-    imageUrl: '/src/assets/images/hospital_singapore_center_1794585249595.jpg',
+    imageUrl: '/images/hospital_singapore_center_1794585249595.jpg',
     description: 'Fictional demonstration MENA quaternary hospital serving cross-border patients across EMEA and South Asia.',
   },
 ];
