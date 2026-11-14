@@ -1,0 +1,6 @@
+{
+  "name": "EthAum CareConnect",
+  "description": "Healthcare Without Borders — AI-powered international medical care discovery, case organization, and cross-border treatment coordination.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

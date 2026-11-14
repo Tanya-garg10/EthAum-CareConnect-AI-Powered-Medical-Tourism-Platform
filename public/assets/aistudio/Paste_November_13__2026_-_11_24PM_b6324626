@@ -1,0 +1,737 @@
+Perfect. Hum **Google AI Studio ke Build mode** mein EthAum CareConnect zero se banayenge. Main tumhe ek hi prompt dekar chhodungi nahi—project ko phases mein build aur test karwayenge, taaki final result ek polished website ke saath functional full-stack application ho.
+
+## **EthAum CareConnect — final product direction**
+
+[採用情報 | Akira Inc](https://images.openai.com/static-rsc-4/4I2S--_cyz9NUAHqrDK0gtIslR9CPk976vAKH5FMwjiTvTcXKq2m6uKhtEkrNmJeYqqGdYPc5dAMj9GHC8QzeoaoEu_1Vpa5p7BPkYg46IPtMi_mOIOd7kPwcv2zDE9r3o71m5JZRBMMn3mYd_KLGqezt1Dg7Ycpj4FJ8N6QNK4?purpose=inline)
+
+[Healthcare Analytics Dashboard - Patient Monitoring System by VibeStyle on Dribbble](https://images.openai.com/static-rsc-4/qSLWmKG_xBNo8yntHlvH2-9v87hhY6xr8hdGkkbitu9voTQq2NK4l894TdMfqs4QUngzOoDwM518701Vop3NMdXcr_-Ef1XfG-NkdpmD7-u5u_5TwmNUKmaC_PxmpxaHEQJAGLpnmrpEecQjfTBZPG_cZovaq-O-KGJVegBoWFk?purpose=inline)
+
+[AI-Powered Medical Assistant Web App (Landing + Dashboard) by Sheikh Elias on Dribbble](https://images.openai.com/static-rsc-4/YbymVApgM_x0uKNY-ZR_b2ZGURnwdZZbZNGj3TgJZlLJpfdcWyVJX265121GD65E5GJbb7XcCYLIhAe_4GgJo2rrAUwm2nBYbweEhbQrPQDfNHfLz1voZIu3Zs4NJHDngOOY3wbSpQ_3FDi-2DLQfR3lhItiCH5fOQV1WGJSxik?purpose=inline)
+
+12
+
+Full-stack
+
+AI-powered
+
+3D experience
+
+Responsive
+
+**Visual identity:** Midnight navy background, electric cyan highlights, violet accents, elegant typography, cinematic 3D Earth, subtle glass panels, smooth transitions and clean dashboards.
+
+**Core modules:** Public website, patient portal, provider portal, admin panel, medical cases, document management, AI case summaries, hospital matching, quotation comparison, appointments, messages and patient journey tracking.
+
+## **1. Google AI Studio mein project create karo**
+
+1. Open [Google AI Studio](https://aistudio.google.com/?utm_source=chatgpt.com).
+2. Google account se sign in karo.
+3. **Build** / **Build apps** section open karo.
+4. New project create karo.
+5. Agar app type poochhe, full-stack web application select karo.
+6. Project ka naam rakho: `EthAum CareConnect`.
+
+AI Studio ka interface update ho sakta hai; agar tumhare screen par options ke naam alag hon, screenshot bhej dena.
+
+Google ke official documentation ke according, Build mode React frontend aur Node.js server-side runtime ke saath full-stack web apps generate kar sakta hai. Firebase integration se Firestore aur Authentication set up ho sakte hain, aur Gemini API key server-side secret ke roop mein use hoti hai.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://ai.google.dev\&sz=32)
+
+Google AI+2
+
+
+
+## **2. First prompt — complete project generation**
+
+Neeche wala prompt **Google AI Studio ke Build prompt box mein poora paste** karna. English mein diya hai kyunki coding agent ko technical requirements clearly samajh aayengi.
+
+# BUILD ETHAUM CARECONNECT — COMPLETE FULL-STACK APPLICATION
+
+Act as a senior product designer, full-stack engineer, AI engineer, database architect and QA engineer.
+
+Build a complete, polished, responsive, production-minded medical tourism web application named **EthAum CareConnect** from scratch.
+
+This is a fresh project. Do not create just a landing page, static prototype or UI mockup. Build a functioning full-stack application with real navigation, forms, authentication, persistent database operations, backend APIs, AI features and role-based dashboards.
+
+## 1. PRODUCT VISION
+
+EthAum CareConnect connects international patients with hospitals, doctors and medical tourism service providers. It helps patients discover providers, organize medical records, request treatment quotations, compare options and coordinate their healthcare journey.
+
+The platform is a coordination and discovery service. It must never claim to diagnose a disease, prescribe treatment or determine clinical suitability.
+
+## 2. TECHNICAL ARCHITECTURE
+
+Use:
+
+- React + TypeScript for the frontend.
+- Modern component-based architecture.
+- Node.js server-side runtime for backend APIs.
+- Firebase Authentication for user identity and Google sign-in.
+- Cloud Firestore for persistent application data.
+- Firebase Storage or another secure server-controlled file storage solution for documents.
+- Gemini API through server-side code only.
+- Three.js, React Three Fiber and Drei for the interactive 3D globe.
+- Framer Motion for interface animations.
+- Lucide icons.
+- Reusable components, clean types and maintainable folder structure.
+
+Use the platform's native Firebase setup flow. If Firebase enablement is offered, ask me to approve it and complete the integration after approval.
+
+Never expose Gemini API keys, service credentials or privileged Firebase credentials in browser code. Never hardcode secrets.
+
+## 3. DESIGN SYSTEM
+
+Create a distinctive premium futuristic HealthTech experience.
+
+Visual identity:
+
+- Background: midnight navy (#070B18).
+- Secondary surfaces: #0D1428 and #111B32.
+- Primary accent: electric cyan (#35D5F5).
+- Secondary accent: vivid blue and restrained violet.
+- Text: high-contrast white and muted blue-grey.
+- Typography: Space Grotesk for headings and Inter for body text.
+- Rounded cards, subtle borders, controlled glassmorphism and elegant shadows.
+- Strong visual hierarchy and generous spacing.
+- Smooth micro-interactions and meaningful transitions.
+- Avoid excessive gradients, clutter and generic hospital templates.
+
+The website should feel like a premium international HealthTech startup.
+
+## 4. PUBLIC LANDING PAGE
+
+Build a cinematic homepage with:
+
+A. Navigation
+
+- EthAum CareConnect logo and brand identity.
+- Treatments, Destinations, Hospitals, How It Works, About.
+- Sign in and Get Started actions.
+- Responsive mobile navigation.
+
+B. Hero section
+
+- Large headline: "Your Healthcare Journey, Connected."
+- Supporting text explaining international treatment discovery and coordination.
+- Primary CTA: Explore Hospitals.
+- Secondary CTA: Start Your Medical Journey.
+- Interactive 3D Earth/globe using Three.js and React Three Fiber.
+- Glowing destination markers, animated connection arcs, subtle particles and floating healthcare data elements.
+- Allow users to interact with the globe and explore destination markers.
+- Include a graceful static fallback if WebGL is unavailable.
+- Optimize 3D performance for laptops and mobile devices.
+
+C. Landing page sections
+
+- Featured treatment categories.
+- International destinations.
+- Featured hospitals and doctors.
+- How the platform works.
+- AI-powered coordination features.
+- Patient journey timeline.
+- Trust, privacy and transparency section.
+- FAQ.
+- Strong footer with navigation and contact details.
+
+Do not invent hospital partnerships, certifications, success rates, ratings or medical credentials. Clearly label all sample content as demo data.
+
+## 5. AUTHENTICATION AND ROLES
+
+Create working authentication:
+
+- Email/password registration and login.
+- Google sign-in where Firebase supports it.
+- Logout.
+- Protected routes.
+- Persistent sessions.
+- Form validation and useful error messages.
+
+Support these roles:
+
+1. Patient.
+2. Provider.
+3. Admin.
+
+New users should complete role-specific onboarding. Never allow a user to grant themselves admin privileges through an ordinary signup form.
+
+## 6. PATIENT DASHBOARD
+
+Create a premium dashboard with sidebar navigation and responsive layout.
+
+Pages:
+
+- Overview.
+- My Medical Cases.
+- Find Hospitals.
+- Find Doctors.
+- AI Medical Case Assistant.
+- Compare Quotations.
+- Medical Documents.
+- Appointments.
+- Messages.
+- Patient Journey.
+- Notifications.
+- Profile and Settings.
+
+Dashboard overview should show:
+
+- Active cases.
+- Pending quotations.
+- Upcoming appointments.
+- Journey progress.
+- Recent activity.
+- Recommended next actions.
+
+All dashboard figures must come from database records or clearly labelled demo records.
+
+## 7. MEDICAL CASE MANAGEMENT
+
+Allow a patient to:
+
+- Create a medical case.
+- Enter treatment category, country preference, preferred language, budget range and travel preferences.
+- Add a short description of their medical needs.
+- Upload relevant medical documents.
+- Edit and view their cases.
+- Track case status.
+
+Use clear statuses:\
+Draft, Submitted, Under Review, Matching, Quotations Received, Consultation, Booked, In Treatment, Aftercare, Closed.
+
+Validate all forms and persist changes to Firestore.
+
+## 8. AI CASE ASSISTANT
+
+Implement a real Gemini-powered assistant through a secure server endpoint.
+
+Features:
+
+- Summarize user-provided medical case descriptions.
+- Organize information into a structured case summary.
+- Extract non-diagnostic administrative details from uploaded records when technically supported.
+- Generate questions the patient may ask a qualified doctor.
+- Explain the platform's process and help with coordination.
+- Help patients understand quotation fields.
+
+Strict safety rules:
+
+- No diagnosis.
+- No prescription.
+- No treatment recommendations presented as medical advice.
+- No prediction of patient outcomes.
+- No claims that AI can determine clinical suitability.
+- Clearly label AI-generated summaries.
+- Include a prominent notice that a qualified clinician must review medical information.
+- If a request is medically urgent, advise contacting an appropriate medical professional or emergency service.
+
+Do not send private records to Gemini without an explicit user action and consent. Minimize transmitted data.
+
+## 9. HOSPITAL AND DOCTOR DISCOVERY
+
+Create searchable provider listings with:
+
+- Search by name, destination and specialty.
+- Filters for treatment category, country and budget range.
+- Provider profile pages.
+- Hospital description.
+- Available specialties.
+- Location.
+- Languages.
+- Services and contact/request information.
+
+Use fictional demo providers and clearly mark them as examples. Never fabricate real-world accreditation or verification.
+
+## 10. EXPLAINABLE PROVIDER MATCHING
+
+Build a transparent preference-based matching system.
+
+Compare patient preferences with provider listing data:
+
+- Destination preference.
+- Treatment category.
+- Budget range.
+- Language preference.
+- Other non-clinical preferences.
+
+Show a clear breakdown of why a provider appears in the results.
+
+Never label the score as medical suitability, clinical success probability or a guaranteed recommendation. Clearly state that the score reflects preference matching only and does not replace clinician evaluation.
+
+## 11. QUOTATION COMPARISON
+
+Patients should be able to receive and compare provider quotations.
+
+Include:
+
+- Total estimated cost.
+- Currency.
+- Included services.
+- Excluded services.
+- Estimated duration.
+- Accommodation and transport details, if supplied.
+- Validity date.
+- Payment and cancellation terms.
+- Provider notes.
+
+Allow patients to compare quotations side by side and request clarification.
+
+Clearly distinguish estimates from confirmed costs. Never invent a quote or imply a payment has occurred.
+
+## 12. PROVIDER DASHBOARD
+
+Create a separate protected provider experience:
+
+- Overview.
+- Incoming patient leads.
+- Medical cases shared with the provider.
+- Case status updates.
+- Quotation creation and editing.
+- Appointment requests.
+- Messages.
+- Provider profile management.
+- Analytics.
+- Settings.
+
+Provider users must only access cases and documents that have been explicitly shared with them and for which they have authorization.
+
+## 13. ADMIN DASHBOARD
+
+Create an admin interface for authorized admin accounts:
+
+- User management.
+- Provider management.
+- Case oversight.
+- Content management.
+- Reports and platform activity.
+- Audit logs.
+
+Admin privileges must be assigned securely, not by trusting a client-side role value.
+
+## 14. PATIENT JOURNEY TRACKER
+
+Build a visual timeline:
+
+Discover → Create Case → Upload Records → Case Review → Provider Matching → Quote Comparison → Shortlist → Consultation Request → Provider Selection → Booking → Treatment → Aftercare → Review.
+
+Show timestamps and status updates when available. Make the current stage visually clear.
+
+## 15. MESSAGING AND NOTIFICATIONS
+
+Implement persistent in-app conversations and notifications.
+
+Users should be able to:
+
+- View conversations.
+- Send and receive messages.
+- See timestamps.
+- Mark notifications as read.
+- Receive updates when case or quotation status changes.
+
+Enforce authorization so users cannot access conversations they do not belong to.
+
+## 16. DATA MODEL
+
+Design Firestore collections and document relationships for:
+
+- users
+- providers
+- medicalCases
+- documents
+- quotations
+- appointments
+- conversations
+- messages
+- notifications
+- journeyEvents
+- auditLogs
+
+Add createdAt, updatedAt, ownership and relevant status fields. Use server-side validation for sensitive operations.
+
+Create Firestore security rules that enforce role-based and ownership-based access. Never rely only on frontend route protection.
+
+## 17. FILE SECURITY
+
+Implement secure document upload:
+
+- Validate file type and file size.
+- Restrict access to authorized users.
+- Store metadata and ownership.
+- Do not expose public medical document URLs.
+- Do not log medical document contents.
+- Include consent and document deletion flows.
+- Do not use real patient records in demo data.
+
+## 18. FUNCTIONALITY REQUIREMENTS
+
+Every visible action must work:
+
+- Navigation.
+- Login and registration.
+- Search and filters.
+- Forms.
+- Uploads.
+- Dashboard cards.
+- Case creation and editing.
+- Quotation comparison.
+- Messages.
+- Notifications.
+- Profile settings.
+- Logout.
+
+No dead buttons, empty placeholder routes, fake integrations or buttons that only show success messages without completing the operation.
+
+If an external service is not configured, show an honest setup or demo-state message.
+
+## 19. DEMO EXPERIENCE
+
+Create realistic but entirely fictional demo records for:
+
+- Hospitals.
+- Doctors.
+- Patient cases.
+- Quotations.
+- Appointments.
+- Journey progress.
+
+Clearly mark all seeded content as demo data. Do not present fictional patient stories as real testimonials.
+
+## 20. RESPONSIVE DESIGN AND ACCESSIBILITY
+
+Support desktop, tablet and mobile.\
+Use accessible labels, keyboard navigation, appropriate contrast and reduced-motion preferences.\
+Ensure the 3D globe does not block page navigation or make mobile performance unusable.
+
+## 21. ENGINEERING QUALITY
+
+- Use TypeScript types throughout.
+- Keep frontend and server-side code separated.
+- Use reusable components.
+- Handle loading, empty, success and error states.
+- Validate inputs on both client and server.
+- Avoid duplicate components and unnecessary dependencies.
+- Avoid giant single-file implementations.
+- Add meaningful error handling.
+- Never put privileged operations in client-side code.
+
+## 22. README AND HANDOVER
+
+Create a README with:
+
+- Project overview.
+- Features.
+- Technology stack.
+- Architecture.
+- Firebase setup.
+- Gemini API setup.
+- Environment variables and secrets.
+- Local development instructions.
+- Demo mode instructions.
+- Deployment instructions.
+- Security and medical AI limitations.
+
+## 23. BUILD AND TEST PROCESS
+
+Work in stages:
+
+1. Generate the complete project structure and design system.
+2. Build the public landing page and 3D globe.
+3. Build authentication and Firebase integration.
+4. Build patient dashboard and case management.
+5. Build provider and admin dashboards.
+6. Build Gemini assistant securely.
+7. Build provider matching, quotations and journey tracker.
+8. Build messaging, notifications and document security.
+9. Test all routes, forms, permissions and database operations.
+10. Fix build errors, runtime errors and responsive layout issues.
+
+Do not stop after creating the homepage.
+
+After each stage, run the available checks, inspect the live preview, fix errors and continue. Do not claim a feature is complete unless it actually works.
+
+Start by creating the project architecture, visual design system, public landing page and interactive 3D globe. Then continue through the remaining stages until the complete application is implemented.
+
+## **3. Firebase enable karna**
+
+Jab AI Studio tumse Firebase integration approve karne ko kahe:
+
+1. **Enable Firebase** select karo.
+
+2. Project create/select karo.
+
+3. Firestore location carefully choose karo—available options mein India ke nearest suitable region ko prefer karo. Database location baad mein change karna difficult/unsupported ho sakta hai.&#x20;
+
+   [image](https://www.google.com/s2/favicons?domain=https://firebase.google.com\&sz=32)
+
+   Firebase+1
+
+4. Authentication aur Firestore setup complete hone do.
+
+5. Gemini API key ko Settings → Secrets mein verify karo. Key ko frontend code ya public GitHub repository mein paste mat karna.
+
+## **4. Build ko phases mein complete karna**
+
+Master prompt ke baad agent ko ye prompts **ek-ek karke** dena. Har phase ka preview check karna.
+
+### **Phase 1 — premium frontend and 3D globe**
+
+```
+
+Now complete the public-facing frontend.
+
+Focus on exceptional visual quality. Build the full responsive landing page with:
+- Interactive Three.js / React Three Fiber Earth.
+- Glowing destination markers and animated arcs.
+- Premium dark navy and cyan design.
+- Elegant typography and custom reusable components.
+- Treatments, destinations, hospitals, how-it-works, AI features, trust section, FAQ and footer.
+- Smooth Framer Motion animations.
+- Responsive navigation and mobile layouts.
+
+Use real interactive 3D elements, not a static globe image. Optimize performance and add a graceful fallback.
+
+Make all navigation links and CTAs lead to real pages or working sections. Do not create fake buttons.
+
+Inspect the live preview, fix all visual and runtime errors, and then continue.
+
+```
+
+### **Phase 2 — authentication and database**
+
+```
+
+Now implement the complete Firebase backend.
+
+Use Firebase Authentication and Cloud Firestore. If Firebase has not yet been enabled, request the required setup approval.
+
+Implement:
+- Email/password registration and login.
+- Google sign-in if available.
+- Patient, Provider and Admin roles.
+- Secure protected routes.
+- Persistent login sessions.
+- Role-specific onboarding.
+- User profile management.
+- Firestore data models and indexes where required.
+- Server-side validation.
+- Firestore security rules based on ownership and role.
+
+Create a secure admin provisioning process. A user must never become an admin by changing a frontend field.
+
+Test signup, login, logout, session persistence and unauthorized access. Fix all issues before moving on.
+
+```
+
+### **Phase 3 — patient portal and medical cases**
+
+```
+
+Build the complete Patient Dashboard.
+
+Create functional pages for:
+1. Overview.
+2. My Medical Cases.
+3. Find Hospitals.
+4. Find Doctors.
+5. AI Assistant.
+6. Compare Quotations.
+7. Medical Documents.
+8. Appointments.
+9. Messages.
+10. Patient Journey.
+11. Notifications.
+12. Profile and Settings.
+
+Implement real Firestore CRUD operations for medical cases, including creation, editing, viewing and status updates.
+
+Add secure document upload with file validation, ownership checks and protected access. Do not expose patient documents through public URLs.
+
+Build a beautiful patient journey timeline with all 13 stages defined in the product requirements.
+
+Use fictional seed data only, clearly marked as demo data. Ensure loading, empty, error and success states are polished.
+
+```
+
+### **Phase 4 — provider portal, AI and matching**
+
+```
+
+Now implement the Provider Dashboard and AI features.
+
+Provider Dashboard:
+- Incoming leads.
+- Shared patient cases.
+- Authorized medical document access.
+- Quotation creation and editing.
+- Appointment requests.
+- Conversations.
+- Provider profile.
+- Analytics.
+
+AI Assistant:
+- Integrate Gemini using the official server-side SDK.
+- Call Gemini only from backend routes.
+- Use the server-side GEMINI_API_KEY secret.
+- Summarize patient-provided case descriptions.
+- Generate structured administrative summaries and questions for doctors.
+- Clearly label AI-generated output.
+- Never diagnose, prescribe or determine clinical suitability.
+
+Provider Matching:
+- Match based on treatment category, destination, budget and language preferences.
+- Show an explainable preference score.
+- Explicitly state that the score is not a medical suitability score.
+
+Quotation Comparison:
+- Compare costs, currencies, included/excluded services, duration, validity and terms.
+- Save quotations to Firestore.
+- Allow patients to request clarification.
+
+Test all backend operations and authorization boundaries.
+
+```
+
+### **Phase 5 — admin, polish and testing**
+
+```
+
+Complete the application.
+
+Build:
+- Secure Admin Dashboard.
+- User and provider management.
+- Case oversight.
+- Content management.
+- Platform analytics.
+- Audit logs.
+- In-app messages and notifications.
+- Search, filters and sorting.
+- Responsive layouts.
+- Accessibility and reduced-motion support.
+
+Run a full QA pass:
+- Test every route.
+- Test every form.
+- Test all navigation and CTA buttons.
+- Test Firebase read/write operations.
+- Test user role restrictions.
+- Test document upload authorization.
+- Test Gemini server endpoint.
+- Test mobile and desktop layouts.
+- Fix TypeScript errors, build errors, runtime errors and console errors.
+
+Remove all dead buttons and placeholder routes. Never claim that an integration works unless it has been tested.
+
+Finish with a complete README, setup instructions, architecture notes and deployment instructions. Report any features that still require external configuration honestly.
+
+```
+
+## **5. Final testing prompt — bahut important**
+
+Jab saare phases complete ho jaayein, ye final prompt dena:
+
+```
+
+Act as a senior QA engineer and security reviewer.
+
+Audit the entire EthAum CareConnect codebase.
+
+Do not redesign the application unnecessarily. Identify and fix:
+- Broken routes and navigation.
+- Non-functional buttons.
+- Forms that do not save data.
+- Firestore permission errors.
+- Authentication and role bypass vulnerabilities.
+- Missing loading, empty and error states.
+- Broken file uploads.
+- Gemini API errors.
+- Mobile layout problems.
+- TypeScript and build errors.
+- Missing environment variables.
+- Insecure access to patient information.
+
+Verify that patient, provider and admin permissions are correctly enforced on the server and in Firestore security rules.
+
+Run available tests and build checks. Fix the issues you find, then provide a checklist of tested features and any remaining limitations.
+
+Do not report a test as passed unless it was actually executed.
+
+```
+
+## **6. GitHub par project save karna**
+
+AI Studio mein GitHub integration / Sync to GitHub option use karo.
+
+- Repository name: `ethaum-careconnect`
+- Visibility: Public (only after checking that no secrets, credentials or real patient data are present).
+- Description:
+
+AI-powered international medical tourism platform connecting patients with hospitals and doctors through smart provider matching, medical case management, secure document handling, transparent treatment comparisons, appointment coordination, and AI-assisted patient journey management.
+
+Agar local VS Code mein project open karna hai, GitHub sync ke baad PowerShell mein:
+
+```
+git clone https://github.com/YOUR_USERNAME/ethaum-careconnect.git
+cd ethaum-careconnect
+npm install
+```
+
+Scripts check karo:
+
+```
+Get-Content package.json
+```
+
+Agar `dev` script available hai:
+
+```
+npm run dev
+```
+
+Agar `build` script available hai:
+
+```
+npm run build
+```
+
+AI Studio dependencies aur project scripts automatically manage kar sakta hai; isliye bina `package.json` check kiye extra commands ya packages manually install mat karna.
+
+## **7. Live deployment**
+
+Deployment option
+
+Google AI Studio Build mode mein:
+
+1. **Publish** click karo.
+2. **Get Started** select karo.
+3. **Publish App** click karo.
+4. Deployment complete hone par Cloud Run URL milega.
+
+Google ka Starter Tier eligible accounts ko up to two apps publish karne deta hai; standard deployment mein Google Cloud project aur billing ki requirement ho sakti hai. Cloud Run usage ke charges bhi lag sakte hain.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://ai.google.dev\&sz=32)
+
+Google AI+1
+
+
+
+Official guides:
+
+- [Google AI Studio Build mode documentation](https://ai.google.dev/gemini-api/docs/aistudio-build-mode?authuser=467\&utm_source=chatgpt.com)
+- [Firebase integration guide](https://firebase.google.com/docs/ai-assistance/ai-studio-integration?utm_source=chatgpt.com)
+- [Deployment guide](https://ai.google.dev/gemini-api/docs/aistudio-deploying?hl=en\&utm_source=chatgpt.com)
+
+## **8. Meri taraf se 5 non-negotiable quality checks**
+
+| Area     | Final expectation                   |
+| -------- | ----------------------------------- |
+| Design   | Premium 3D, responsive, polished    |
+| Backend  | Actual Firestore persistence        |
+| Security | Protected roles and medical records |
+| AI       | Server-side Gemini, no diagnosis    |
+| Demo     | Functional flows, honest demo data  |
+
+**Ek important caution:** Ye medical-tourism platform hai, isliye real patient records upload mat karna jab tak privacy, consent, access control, storage security aur applicable legal requirements properly review na ho jaayein. Hackathon demo ke liye fictional data use karo.
+
+## **Ab tumhara first task**
+
+Pehle Google AI Studio Build mode mein master prompt paste karo. Firebase enablement aaye toh approve karo. Uske baad generated app ka **first preview screenshot mujhe bhejna**—main design aur implementation dekhkar next changes ke exact prompts dungi.

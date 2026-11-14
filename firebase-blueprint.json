@@ -1,0 +1,321 @@
+{
+  "entities": {
+    "UserPublic": {
+      "title": "UserPublic",
+      "description": "Non-PII display profile for a signed-in CareConnect user.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "displayName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "role": { "type": "string", "enum": ["patient", "provider"] },
+        "preferredLanguage": { "type": "string", "minLength": 2, "maxLength": 40 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "displayName", "role", "preferredLanguage", "updatedAt"]
+    },
+    "UserPrivate": {
+      "title": "UserPrivate",
+      "description": "PII user profile isolated under owner-only subcollection.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "email": { "type": "string", "format": "email", "maxLength": 180 },
+        "country": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "organizationName": { "type": "string", "maxLength": 160 },
+        "hospitalId": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "consentAccepted": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "country", "consentAccepted", "createdAt", "updatedAt"]
+    },
+    "ProviderListing": {
+      "title": "ProviderListing",
+      "description": "Demonstration or partner hospital profile in the CareConnect directory.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "name": { "type": "string", "minLength": 2, "maxLength": 180 },
+        "country": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "city": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "credentialStatus": { "type": "string", "enum": ["verified", "sample"] },
+        "indicativePriceUsd": { "type": "number" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "name", "country", "city", "credentialStatus", "indicativePriceUsd", "updatedAt"]
+    },
+    "MedicalCase": {
+      "title": "MedicalCase",
+      "description": "Patient-owned international medical coordination case.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseReference": { "type": "string", "minLength": 5, "maxLength": 32 },
+        "patientId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "title": { "type": "string", "minLength": 3, "maxLength": 180 },
+        "specialty": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "targetProcedure": { "type": "string", "minLength": 2, "maxLength": 140 },
+        "preferredLanguage": { "type": "string", "minLength": 2, "maxLength": 40 },
+        "budgetUsd": { "type": "number" },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Draft",
+            "Submitted",
+            "Under Review",
+            "Matching",
+            "Quotations Received",
+            "Consultation",
+            "Booked",
+            "In Treatment",
+            "Aftercare",
+            "Closed"
+          ]
+        },
+        "currentJourneyStage": { "type": "number" },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "id",
+        "caseReference",
+        "patientId",
+        "title",
+        "specialty",
+        "targetProcedure",
+        "preferredLanguage",
+        "budgetUsd",
+        "status",
+        "currentJourneyStage",
+        "summary",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "MedicalDocument": {
+      "title": "MedicalDocument",
+      "description": "Protected medical document metadata under a patient case.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "patientId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "fileName": { "type": "string", "minLength": 1, "maxLength": 180 },
+        "fileType": { "type": "string", "minLength": 2, "maxLength": 40 },
+        "category": { "type": "string", "minLength": 2, "maxLength": 60 },
+        "version": { "type": "string", "minLength": 2, "maxLength": 20 },
+        "sizeKb": { "type": "number" },
+        "deletionRequested": { "type": "boolean" },
+        "uploadedAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "id",
+        "caseId",
+        "patientId",
+        "fileName",
+        "fileType",
+        "category",
+        "version",
+        "sizeKb",
+        "deletionRequested",
+        "uploadedAt",
+        "updatedAt"
+      ]
+    },
+    "TreatmentQuote": {
+      "title": "TreatmentQuote",
+      "description": "Itemized treatment quotation linked to a patient case.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "patientId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "hospitalId": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "treatmentName": { "type": "string", "minLength": 2, "maxLength": 180 },
+        "estimatedPrice": { "type": "number" },
+        "currency": { "type": "string", "enum": ["USD", "EUR", "SGD"] },
+        "shortlisted": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["Active", "Pending Revision", "Selected for Review"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "id",
+        "caseId",
+        "patientId",
+        "hospitalId",
+        "treatmentName",
+        "estimatedPrice",
+        "currency",
+        "shortlisted",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Virtual consultation request between patient and hospital desk.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "patientId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "hospitalId": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "type": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "scheduledAtIso": { "type": "string", "maxLength": 64 },
+        "timeZone": { "type": "string", "maxLength": 64 },
+        "status": {
+          "type": "string",
+          "enum": ["Confirmed", "Pending Provider Confirmation", "Reschedule Requested", "Cancelled"]
+        },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "id",
+        "caseId",
+        "patientId",
+        "hospitalId",
+        "type",
+        "scheduledAtIso",
+        "timeZone",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "ConversationMessage": {
+      "title": "ConversationMessage",
+      "description": "Case-scoped message in a medical case thread.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "senderUid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "senderRole": { "type": "string", "enum": ["patient", "provider", "coordinator"] },
+        "body": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "caseId", "senderUid", "senderRole", "body", "createdAt"]
+    },
+    "UserNotification": {
+      "title": "UserNotification",
+      "description": "User-scoped notification item.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 140 },
+        "detail": { "type": "string", "minLength": 1, "maxLength": 400 },
+        "read": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "title", "detail", "read", "createdAt"]
+    },
+    "JourneyEvent": {
+      "title": "JourneyEvent",
+      "description": "Milestone progress update on a medical case.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "patientId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "stage": { "type": "number" },
+        "title": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "caseId", "patientId", "stage", "title", "createdAt"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Immutable security and consent audit event.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "actorUid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "action": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "resource": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "actorUid", "action", "resource", "createdAt"]
+    },
+    "AdminMarker": {
+      "title": "AdminMarker",
+      "description": "Authoritative server-provisioned admin role marker.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "grantedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "grantedAt"]
+    },
+    "DocumentConsent": {
+      "title": "DocumentConsent",
+      "description": "Granular hospital consent record for a specific medical document.",
+      "type": "object",
+      "properties": {
+        "hospitalId": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "granted": { "type": "boolean" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["hospitalId", "granted", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/public/profile": {
+      "schema": { "$ref": "#/entities/UserPublic" },
+      "description": "User non-PII profile readable by owner or admin."
+    },
+    "/users/{userId}/private/info": {
+      "schema": { "$ref": "#/entities/UserPrivate" },
+      "description": "User PII isolated strictly to the owning user or verified admin."
+    },
+    "/users/{userId}/notifications/{notificationId}": {
+      "schema": { "$ref": "#/entities/UserNotification" },
+      "description": "User-scoped notifications."
+    },
+    "/providers/{providerId}": {
+      "schema": { "$ref": "#/entities/ProviderListing" },
+      "description": "Hospital directory profiles (publicly readable; admin writable)."
+    },
+    "/medicalCases/{caseId}": {
+      "schema": { "$ref": "#/entities/MedicalCase" },
+      "description": "Medical cases owned by the patient."
+    },
+    "/medicalCases/{caseId}/journeyEvents/{eventId}": {
+      "schema": { "$ref": "#/entities/JourneyEvent" },
+      "description": "Patient journey stage change events under a medical case."
+    },
+    "/medicalCases/{caseId}/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/ConversationMessage" },
+      "description": "Messages belonging to a specific medical case."
+    },
+    "/documents/{documentId}": {
+      "schema": { "$ref": "#/entities/MedicalDocument" },
+      "description": "Protected medical document metadata owned by patient."
+    },
+    "/documents/{documentId}/consents/{hospitalId}": {
+      "schema": { "$ref": "#/entities/DocumentConsent" },
+      "description": "Explicit hospital consent subcollection per medical document."
+    },
+    "/quotations/{quoteId}": {
+      "schema": { "$ref": "#/entities/TreatmentQuote" },
+      "description": "Treatment quotations tied to a medical case."
+    },
+    "/appointments/{appointmentId}": {
+      "schema": { "$ref": "#/entities/Appointment" },
+      "description": "Virtual consultation appointments tied to a medical case."
+    },
+    "/auditLogs/{logId}": {
+      "schema": { "$ref": "#/entities/AuditLog" },
+      "description": "Security and consent audit log (admin read-only; immutable)."
+    },
+    "/admins/{userId}": {
+      "schema": { "$ref": "#/entities/AdminMarker" },
+      "description": "Trusted admin ACL marker documents (read-only for owner/admin)."
+    }
+  }
+}

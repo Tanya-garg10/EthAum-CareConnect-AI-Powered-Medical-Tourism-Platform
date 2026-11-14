@@ -1,0 +1,979 @@
+{
+  "users": [
+    {
+      "id": "usr-patient-1",
+      "role": "patient",
+      "fullName": "Aarav Mehta",
+      "email": "patient@careconnect.demo",
+      "country": "United Kingdom",
+      "preferredLanguage": "English",
+      "consentAccepted": true,
+      "createdAt": "2026-10-18T09:15:00.000Z",
+      "passwordHash": "110f4d5d2a4be5644fb8b74142477156:90edba991d2b69838c509beea55f3f97adc477efbb377c1bbbb384772ccea5d7daaf62b0425a88db691b83680b42731f2eb40757e786f6ba143ea48fc4a04539"
+    },
+    {
+      "id": "usr-provider-1",
+      "role": "provider",
+      "fullName": "Dr. Arvind Subramanian",
+      "email": "provider@careconnect.demo",
+      "country": "Singapore",
+      "preferredLanguage": "English",
+      "organizationName": "Novena Heart & Proton Medical Center",
+      "providerType": "Tertiary International Hospital",
+      "hospitalId": "hosp-sg-1",
+      "consentAccepted": true,
+      "createdAt": "2026-09-22T11:00:00.000Z",
+      "passwordHash": "110f4d5d2a4be5644fb8b74142477156:90edba991d2b69838c509beea55f3f97adc477efbb377c1bbbb384772ccea5d7daaf62b0425a88db691b83680b42731f2eb40757e786f6ba143ea48fc4a04539"
+    },
+    {
+      "id": "usr-admin-1",
+      "role": "admin",
+      "fullName": "Elena Vance (Platform Operations)",
+      "email": "admin@careconnect.demo",
+      "country": "Switzerland",
+      "preferredLanguage": "English",
+      "organizationName": "EthAum CareConnect Operations",
+      "consentAccepted": true,
+      "createdAt": "2026-09-01T08:00:00.000Z",
+      "passwordHash": "110f4d5d2a4be5644fb8b74142477156:90edba991d2b69838c509beea55f3f97adc477efbb377c1bbbb384772ccea5d7daaf62b0425a88db691b83680b42731f2eb40757e786f6ba143ea48fc4a04539"
+    }
+  ],
+  "hospitals": [
+    {
+      "id": "hosp-sg-1",
+      "name": "Novena Heart & Proton Medical Center (Sample)",
+      "country": "Singapore",
+      "city": "Singapore",
+      "specialties": [
+        "Cardiology",
+        "Precision Oncology",
+        "Neurology"
+      ],
+      "treatments": [
+        "TAVR / Valve Replacement",
+        "Proton Beam Therapy",
+        "Minimally Invasive CABG"
+      ],
+      "accreditations": [
+        "Sample JCI-Aligned Profile",
+        "International Desk Ready"
+      ],
+      "credentialStatus": "verified",
+      "credentialNote": "Sample Demonstration Profile — Verified format preview",
+      "languages": [
+        "English",
+        "Mandarin",
+        "Malay"
+      ],
+      "indicativePriceUsd": 22400,
+      "indicativeRangeLabel": "$19,500 – $26,800",
+      "nextAvailabilityDays": 4,
+      "services": [
+        "International Patient Desk",
+        "Airport Transfer",
+        "24/7 ICU Telemetry",
+        "Digital DICOM Portal"
+      ],
+      "facilities": [
+        "Hybrid Cath Lab",
+        "Proton Gantry Bay",
+        "18-Bed Cardiac ICU",
+        "Private Recovery Wing"
+      ],
+      "bedCapacity": 420,
+      "internationalDesk": true,
+      "imageUrl": "/src/assets/images/hospital_singapore_center_1794585249595.jpg",
+      "description": "Fictional demonstration quaternary cardiac and proton oncology center serving cross-border patients across APAC and EMEA."
+    },
+    {
+      "id": "hosp-de-1",
+      "name": "Munich Precision Surgical Institute (Sample)",
+      "country": "Germany",
+      "city": "Munich",
+      "specialties": [
+        "Orthopedics",
+        "Neurology",
+        "Precision Oncology"
+      ],
+      "treatments": [
+        "MAKO Robotic Knee Replacement",
+        "Deep Brain Stimulation (DBS)",
+        "Spine Decompression"
+      ],
+      "accreditations": [
+        "Sample ISO-9001 Clinical",
+        "Rehab Wing Certified (Demo)"
+      ],
+      "credentialStatus": "verified",
+      "credentialNote": "Sample Demonstration Profile — Verified format preview",
+      "languages": [
+        "English",
+        "German",
+        "Arabic"
+      ],
+      "indicativePriceUsd": 16800,
+      "indicativeRangeLabel": "$14,900 – $19,200",
+      "nextAvailabilityDays": 9,
+      "services": [
+        "Dedicated Rehab Wing",
+        "Multilingual Case Liaison",
+        "Visa Support Letter",
+        "Post-Op Tele-Followup"
+      ],
+      "facilities": [
+        "MAKO Robotic Suite",
+        "Intraoperative 3T MRI",
+        "Hydrotherapy Rehab Pool"
+      ],
+      "bedCapacity": 310,
+      "internationalDesk": true,
+      "imageUrl": "/src/assets/images/hospital_europe_institute_1794585250165.jpg",
+      "description": "Fictional demonstration European center of excellence for navigation-guided spine, joint reconstruction, and functional neurosurgery."
+    },
+    {
+      "id": "hosp-in-1",
+      "name": "Indraprastha Vascular & Robotic Center (Sample)",
+      "country": "India",
+      "city": "New Delhi",
+      "specialties": [
+        "Cardiology",
+        "Orthopedics",
+        "Hepatobiliary"
+      ],
+      "treatments": [
+        "Minimally Invasive CABG",
+        "TAVR / Valve Replacement",
+        "Total Hip Arthroplasty"
+      ],
+      "accreditations": [
+        "Sample JCI/NABH Format",
+        "Dedicated CTVS Wing"
+      ],
+      "credentialStatus": "verified",
+      "credentialNote": "Sample Demonstration Profile — Verified format preview",
+      "languages": [
+        "English",
+        "Hindi",
+        "Arabic",
+        "French"
+      ],
+      "indicativePriceUsd": 11800,
+      "indicativeRangeLabel": "$9,800 – $14,200",
+      "nextAvailabilityDays": 3,
+      "services": [
+        "Dedicated Cardiac Coordinator",
+        "Airport Meet & Greet",
+        "Interpreter Support",
+        "Family Companion Suite"
+      ],
+      "facilities": [
+        "Biplane Cardiac Suite",
+        "Robotic Joint Theater",
+        "32-Bed CTVS ICU"
+      ],
+      "bedCapacity": 680,
+      "internationalDesk": true,
+      "imageUrl": "/src/assets/images/treatment_cardiology_suite_1794585247734.jpg",
+      "description": "Fictional demonstration structural heart and robotic joint institute built for transparent cross-border cardiac care."
+    },
+    {
+      "id": "hosp-tr-1",
+      "name": "Bosphorus Oncology & Dental Campus (Sample)",
+      "country": "Turkey",
+      "city": "Istanbul",
+      "specialties": [
+        "Precision Oncology",
+        "Dental Care",
+        "Cosmetic Surgery"
+      ],
+      "treatments": [
+        "All-on-4 Titanium/Zirconia Arch",
+        "Robotic Oncologic Resection",
+        "Functional Rhinoplasty"
+      ],
+      "accreditations": [
+        "Sample TEMOS Format"
+      ],
+      "credentialStatus": "sample",
+      "credentialNote": "Unverified sample listing — awaiting provider verification upload",
+      "languages": [
+        "English",
+        "Turkish",
+        "Arabic",
+        "German"
+      ],
+      "indicativePriceUsd": 7900,
+      "indicativeRangeLabel": "$6,400 – $11,500",
+      "nextAvailabilityDays": 4,
+      "services": [
+        "Hotel Recovery Coordination",
+        "3D CBCT Digital Lab",
+        "VIP Airport Shuttle",
+        "Bilingual Nursing"
+      ],
+      "facilities": [
+        "CAD/CAM Ceramic Lab",
+        "Robotic Surgical Suite",
+        "Outpatient Recovery Suites"
+      ],
+      "bedCapacity": 260,
+      "internationalDesk": true,
+      "imageUrl": "/src/assets/images/treatment_oncology_lab_1794585247733.jpg",
+      "description": "Fictional demonstration integrated oncology and digital maxillofacial hospital serving patients across Europe and MENA."
+    },
+    {
+      "id": "hosp-th-1",
+      "name": "Sukhumvit International Orthopedic Hospital (Sample)",
+      "country": "Thailand",
+      "city": "Bangkok",
+      "specialties": [
+        "Orthopedics",
+        "Cardiology",
+        "Fertility"
+      ],
+      "treatments": [
+        "MAKO Robotic Knee Replacement",
+        "Total Hip Arthroplasty",
+        "IVF / ICSI Cycle"
+      ],
+      "accreditations": [
+        "Sample GHA Format"
+      ],
+      "credentialStatus": "verified",
+      "credentialNote": "Sample Demonstration Profile — Verified format preview",
+      "languages": [
+        "English",
+        "Thai",
+        "Japanese",
+        "Arabic"
+      ],
+      "indicativePriceUsd": 13400,
+      "indicativeRangeLabel": "$11,200 – $16,000",
+      "nextAvailabilityDays": 4,
+      "services": [
+        "30-Language Interpreters",
+        "In-Hospital Recovery Suites",
+        "Physiotherapy Pool",
+        "Concierge Transfers"
+      ],
+      "facilities": [
+        "Robotic Arthroplasty Bay",
+        "Embryology Cleanroom",
+        "Rehabilitation Gymnasium"
+      ],
+      "bedCapacity": 510,
+      "internationalDesk": true,
+      "imageUrl": "/src/assets/images/treatment_orthopedics_robotics_1794585249569.jpg",
+      "description": "Fictional demonstration tertiary hospital pairing robotic joint surgery with dedicated post-operative rehabilitation."
+    },
+    {
+      "id": "hosp-kr-1",
+      "name": "Seoul Digital Microsurgery & Neuro Center (Sample)",
+      "country": "South Korea",
+      "city": "Seoul",
+      "specialties": [
+        "Cosmetic Surgery",
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "treatments": [
+        "Microvascular Reconstruction",
+        "Gamma Knife Radiosurgery",
+        "Femto-LASIK / ReLEx SMILE"
+      ],
+      "accreditations": [
+        "Sample KOIHA Format"
+      ],
+      "credentialStatus": "sample",
+      "credentialNote": "Unverified sample listing — accreditation document pending review",
+      "languages": [
+        "English",
+        "Korean",
+        "Mandarin",
+        "Japanese"
+      ],
+      "indicativePriceUsd": 14600,
+      "indicativeRangeLabel": "$12,000 – $18,500",
+      "nextAvailabilityDays": 6,
+      "services": [
+        "3D Surgical Simulation",
+        "Private Recovery Suites",
+        "Interpreter Concierge",
+        "Remote Scar Monitoring"
+      ],
+      "facilities": [
+        "Gamma Knife Suite",
+        "3D Craniofacial Lab",
+        "Micro-Ophthalmic Theater"
+      ],
+      "bedCapacity": 195,
+      "internationalDesk": true,
+      "imageUrl": "/src/assets/images/hospital_singapore_center_1794585249595.jpg",
+      "description": "Fictional demonstration microsurgical, craniofacial, and stereotactic neurology center in Seoul."
+    },
+    {
+      "id": "hosp-in-2",
+      "name": "Deccan Metabolic & Vision Institute (Sample)",
+      "country": "India",
+      "city": "New Delhi",
+      "specialties": [
+        "Bariatric",
+        "Ophthalmology",
+        "Orthopedics"
+      ],
+      "treatments": [
+        "Laparoscopic Sleeve Gastrectomy",
+        "Multifocal IOL Cataract Surgery",
+        "Total Hip Arthroplasty"
+      ],
+      "accreditations": [
+        "Sample NABH Format"
+      ],
+      "credentialStatus": "sample",
+      "credentialNote": "Unverified sample listing — awaiting institutional verification",
+      "languages": [
+        "English",
+        "Hindi",
+        "Arabic"
+      ],
+      "indicativePriceUsd": 6800,
+      "indicativeRangeLabel": "$5,400 – $9,200",
+      "nextAvailabilityDays": 3,
+      "services": [
+        "Nutrition Tele-Coaching",
+        "Dedicated Visa Desk",
+        "Airport Pick-up"
+      ],
+      "facilities": [
+        "Laparoscopic Bariatric Suite",
+        "Femtosecond Laser Wing",
+        "Metabolic Clinic"
+      ],
+      "bedCapacity": 240,
+      "internationalDesk": true,
+      "imageUrl": "/src/assets/images/treatment_cardiology_suite_1794585247734.jpg",
+      "description": "Fictional demonstration metabolic, bariatric, and micro-vision surgical institute."
+    },
+    {
+      "id": "hosp-de-2",
+      "name": "Heidelberg Genomic Oncology Pavilion (Sample)",
+      "country": "Germany",
+      "city": "Munich",
+      "specialties": [
+        "Precision Oncology",
+        "Hepatobiliary",
+        "Neurology"
+      ],
+      "treatments": [
+        "Proton Beam Therapy",
+        "Genomic Targeted Protocol",
+        "HPB Tumor Resection"
+      ],
+      "accreditations": [
+        "Sample ClarCert Oncology Format"
+      ],
+      "credentialStatus": "sample",
+      "credentialNote": "Unverified sample listing — awaiting registry validation",
+      "languages": [
+        "English",
+        "German",
+        "French"
+      ],
+      "indicativePriceUsd": 31500,
+      "indicativeRangeLabel": "$26,000 – $44,000",
+      "nextAvailabilityDays": 8,
+      "services": [
+        "Molecular Tumor Board",
+        "Bilingual Case Liaison",
+        "Family Apartment Support"
+      ],
+      "facilities": [
+        "Carbon/Proton Beam Bay",
+        "NGS Sequencing Lab",
+        "HPB Surgical ICU"
+      ],
+      "bedCapacity": 280,
+      "internationalDesk": true,
+      "imageUrl": "/src/assets/images/hospital_europe_institute_1794585250165.jpg",
+      "description": "Fictional demonstration European precision oncology and molecular tumor board pavilion."
+    },
+    {
+      "id": "hosp-ae-1",
+      "name": "Al Wasl Crescent International Medical Center (Sample)",
+      "country": "UAE",
+      "city": "Dubai",
+      "specialties": [
+        "Cardiology",
+        "Orthopedics",
+        "Fertility"
+      ],
+      "treatments": [
+        "TAVR / Valve Replacement",
+        "Total Hip Arthroplasty",
+        "IVF / ICSI Cycle"
+      ],
+      "accreditations": [
+        "Sample JCI/DHCC Format",
+        "MENA Concierge Desk"
+      ],
+      "credentialStatus": "verified",
+      "credentialNote": "Sample Demonstration Profile — Verified format preview",
+      "languages": [
+        "English",
+        "Arabic",
+        "Hindi",
+        "Russian"
+      ],
+      "indicativePriceUsd": 18400,
+      "indicativeRangeLabel": "$14,800 – $23,500",
+      "nextAvailabilityDays": 4,
+      "services": [
+        "DXB VIP Medical Reception",
+        "Multilingual Family Liaison",
+        "Medical Visa Extension Support"
+      ],
+      "facilities": [
+        "Hybrid Cardiac Cath Suite",
+        "Embryology Cleanroom",
+        "Private Sea-View Recovery Wing"
+      ],
+      "bedCapacity": 350,
+      "internationalDesk": true,
+      "availableSlots": [
+        "2026-11-18T10:00",
+        "2026-11-19T14:30",
+        "2026-11-21T09:00"
+      ],
+      "imageUrl": "/src/assets/images/hospital_singapore_center_1794585249595.jpg",
+      "description": "Fictional demonstration MENA quaternary hospital serving cross-border patients across EMEA and South Asia."
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-101",
+      "patientId": "usr-patient-1",
+      "patientName": "Aarav Mehta",
+      "patientCountry": "United Kingdom",
+      "title": "Mitral Valve Evaluation & Minimally Invasive Repair Options",
+      "specialty": "Cardiology",
+      "targetProcedure": "TAVR / Valve Replacement",
+      "preferredCountries": [
+        "Singapore",
+        "India",
+        "Germany"
+      ],
+      "preferredLanguage": "English",
+      "budgetUsd": 24000,
+      "urgency": "Priority (2–4 weeks)",
+      "summary": "Seeking accredited structural heart centers for minimally invasive valve repair evaluation. Recent transthoracic echocardiogram and cardiology referral letter available for specialist review.",
+      "aiAssistedSummary": "AI-Assisted Administrative Summary: Patient seeks cross-border structural heart consultation (valve repair/replacement) within a $24,000 target budget and English-speaking clinical coordination. Echocardiogram summary uploaded; recent 12-lead ECG and passport validity confirmation remain pending for travel readiness.",
+      "missingAdminDetails": [
+        "Updated 12-lead ECG PDF",
+        "Preferred Companion Travel Dates"
+      ],
+      "currentJourneyStage": 6,
+      "completedStages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "providerLeadStage": "Treatment",
+      "assignedHospitalIds": [
+        "hosp-sg-1",
+        "hosp-in-1",
+        "hosp-de-1"
+      ],
+      "createdAt": "2026-11-02T10:20:00.000Z",
+      "updatedAt": "2026-11-13T18:04:49.541Z"
+    },
+    {
+      "id": "case-102",
+      "patientId": "usr-patient-1",
+      "patientName": "Aarav Mehta",
+      "patientCountry": "United Kingdom",
+      "title": "Second Opinion — Right Knee Robotic Arthroplasty",
+      "specialty": "Orthopedics",
+      "targetProcedure": "MAKO Robotic Knee Replacement",
+      "preferredCountries": [
+        "Germany",
+        "Thailand",
+        "India"
+      ],
+      "preferredLanguage": "English",
+      "budgetUsd": 16500,
+      "urgency": "Routine (4–8 weeks)",
+      "summary": "Exploring robotic-assisted knee arthroplasty with structured 7-day inpatient physiotherapy program.",
+      "aiAssistedSummary": "AI-Assisted Administrative Summary: Routine orthopedic surgical planning inquiry for robotic knee arthroplasty. Patient prioritizes inpatient rehabilitation and transparent implant inclusion breakdown.",
+      "missingAdminDetails": [
+        "Standing Weight-Bearing Knee X-Ray"
+      ],
+      "currentJourneyStage": 4,
+      "completedStages": [
+        1,
+        2,
+        3
+      ],
+      "providerLeadStage": "Medical Review",
+      "assignedHospitalIds": [
+        "hosp-de-1",
+        "hosp-th-1",
+        "hosp-in-1"
+      ],
+      "createdAt": "2026-11-08T16:40:00.000Z",
+      "updatedAt": "2026-11-12T08:10:00.000Z"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-901",
+      "caseId": "case-101",
+      "patientId": "usr-patient-1",
+      "fileName": "Transthoracic_Echocardiogram_Oct2026.pdf",
+      "fileType": "PDF",
+      "category": "Cardiology / ECG",
+      "sizeKb": 1840,
+      "uploadedAt": "2026-11-03T11:12:00.000Z",
+      "sharedWithHospitalIds": [
+        "hosp-sg-1",
+        "hosp-in-1"
+      ],
+      "deletionRequested": false,
+      "aiExtractedNotes": "AI-Assisted Extraction: Document dated Oct 2026 · Contains echocardiogram measurements & cardiologist referral note. Shared with 2 consented centers.",
+      "rawExcerpt": "TTE Study Report — LVEF documented, valve morphology evaluated for surgical planning."
+    },
+    {
+      "id": "doc-902",
+      "caseId": "case-101",
+      "patientId": "usr-patient-1",
+      "fileName": "Comprehensive_Metabolic_CBC_Panel.pdf",
+      "fileType": "Lab Report",
+      "category": "Pathology & Labs",
+      "sizeKb": 620,
+      "uploadedAt": "2026-11-04T09:05:00.000Z",
+      "sharedWithHospitalIds": [
+        "hosp-sg-1"
+      ],
+      "deletionRequested": false,
+      "aiExtractedNotes": "AI-Assisted Extraction: Pre-operative baseline blood panel (CBC, renal, hepatic). Currently consented exclusively for Novena Heart & Proton Medical Center.",
+      "rawExcerpt": "Baseline hematology & chemistry panel prior to specialist consultation."
+    },
+    {
+      "id": "doc-903",
+      "caseId": "case-102",
+      "patientId": "usr-patient-1",
+      "fileName": "Orthopedic_MRI_Summary_Nov2026.pdf",
+      "fileType": "DICOM Summary",
+      "category": "Radiology / Imaging",
+      "sizeKb": 3120,
+      "uploadedAt": "2026-11-09T13:45:00.000Z",
+      "sharedWithHospitalIds": [
+        "hosp-de-1",
+        "hosp-th-1"
+      ],
+      "deletionRequested": false,
+      "aiExtractedNotes": "AI-Assisted Extraction: Right knee MRI radiology narrative prepared for orthopedic review.",
+      "rawExcerpt": "MRI right knee compartments and alignment measurements."
+    }
+  ],
+  "quotes": [
+    {
+      "id": "qt-501",
+      "caseId": "case-101",
+      "hospitalId": "hosp-sg-1",
+      "hospitalName": "Novena Heart & Proton Medical Center",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Arvind Subramanian, MD, FACC",
+      "country": "Singapore",
+      "city": "Singapore",
+      "treatmentName": "Minimally Invasive Structural Valve Repair Package",
+      "estimatedPrice": 21500,
+      "currency": "USD",
+      "includedServices": [
+        "Surgeon & anesthesia team fees",
+        "2 days Cardiac ICU + 5 days private ward",
+        "Pre-op CT angiogram & lab workup",
+        "Changi Airport transfer & dedicated coordinator"
+      ],
+      "excludedServices": [
+        "International airfare & visa fees",
+        "Extended ICU stay beyond 48 hours if clinically indicated",
+        "Outpatient companion hotel accommodation"
+      ],
+      "accommodation": "5 nights private cardiac suite (hospital wing)",
+      "expectedDurationDays": 10,
+      "consultationAvailability": "Video screen available within 48 hours",
+      "validUntil": "2026-12-15",
+      "paymentConditions": "20% refundable pre-admission deposit upon formal consult confirmation",
+      "shortlisted": true,
+      "status": "Active",
+      "createdAt": "2026-11-07T08:00:00.000Z",
+      "savedForComparison": true,
+      "costType": "Confirmed"
+    },
+    {
+      "id": "qt-502",
+      "caseId": "case-101",
+      "hospitalId": "hosp-in-1",
+      "hospitalName": "Indraprastha Vascular & Robotic Center",
+      "doctorId": "doc-3",
+      "doctorName": "Dr. Meera Raghavan, MS, MCh",
+      "country": "India",
+      "city": "New Delhi",
+      "treatmentName": "Port-Access Cardiac Valve Repair Package",
+      "estimatedPrice": 11800,
+      "currency": "USD",
+      "includedServices": [
+        "Chief cardiothoracic surgeon & perfusion fees",
+        "3 days CTVS ICU + 5 days deluxe room with companion bed",
+        "All routine inpatient medications & consumables",
+        "Airport meet-and-greet + English/Arabic interpreter"
+      ],
+      "excludedServices": [
+        "Imported specialized mechanical/bioprosthetic valve upgrade if needed",
+        "Flights & external hotel stays post-discharge"
+      ],
+      "accommodation": "8 nights inpatient deluxe suite (1 companion included)",
+      "expectedDurationDays": 12,
+      "consultationAvailability": "Same-week video consult slots open",
+      "validUntil": "2026-12-20",
+      "paymentConditions": "No upfront fee for video screen; 15% booking hold prior to visa letter",
+      "shortlisted": true,
+      "status": "Active",
+      "createdAt": "2026-11-08T12:20:00.000Z"
+    },
+    {
+      "id": "qt-503",
+      "caseId": "case-102",
+      "hospitalId": "hosp-de-1",
+      "hospitalName": "Munich Precision Surgical Institute",
+      "doctorId": "doc-2",
+      "doctorName": "Prof. Dr. Lukas Weber, MD",
+      "country": "Germany",
+      "city": "Munich",
+      "treatmentName": "MAKO Robotic-Assisted Knee Arthroplasty + Rehab",
+      "estimatedPrice": 16800,
+      "currency": "USD",
+      "includedServices": [
+        "Chief orthopedic surgeon & robotic navigation fee",
+        "6 days inpatient ward + 5 days physical therapy sessions",
+        "3D CT pre-operative surgical planning",
+        "Post-op thrombosis prophylaxis & imaging"
+      ],
+      "excludedServices": [
+        "Travel & Schengen visa application fees",
+        "Outpatient hotel after inpatient discharge"
+      ],
+      "accommodation": "6 nights private surgical recovery room",
+      "expectedDurationDays": 11,
+      "consultationAvailability": "Next slot Nov 15, 14:00 CET",
+      "validUntil": "2026-12-30",
+      "paymentConditions": "30% hospital escrow deposit 14 days prior to admission",
+      "shortlisted": false,
+      "status": "Active",
+      "createdAt": "2026-11-10T09:45:00.000Z"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "apt-301",
+      "caseId": "case-101",
+      "patientId": "usr-patient-1",
+      "patientName": "Aarav Mehta",
+      "hospitalId": "hosp-sg-1",
+      "hospitalName": "Novena Heart & Proton Medical Center",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Arvind Subramanian, MD, FACC",
+      "type": "Exploratory Virtual Call",
+      "scheduledAtIso": "2026-11-16T09:30:00.000Z",
+      "timeZone": "Europe/London (GMT)",
+      "status": "Confirmed",
+      "meetingMode": "CareConnect Encrypted Video Room (Integration-Ready)",
+      "notes": "Review TTE PDF and clarify expected inpatient stay duration."
+    },
+    {
+      "id": "apt-302",
+      "caseId": "case-101",
+      "patientId": "usr-patient-1",
+      "patientName": "Aarav Mehta",
+      "hospitalId": "hosp-in-1",
+      "hospitalName": "Indraprastha Vascular & Robotic Center",
+      "doctorId": "doc-3",
+      "doctorName": "Dr. Meera Raghavan, MS, MCh",
+      "type": "Exploratory Virtual Call",
+      "scheduledAtIso": "2026-11-18T11:30:00.000Z",
+      "timeZone": "Europe/London (GMT)",
+      "status": "Pending Provider Confirmation",
+      "meetingMode": "CareConnect Encrypted Video Room (Integration-Ready)",
+      "notes": "Compare port-access recovery timeline and companion lodging."
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "caseId": "case-101",
+      "senderRole": "coordinator",
+      "senderName": "Novena International Desk",
+      "recipientHospitalId": "hosp-sg-1",
+      "body": "Welcome Aarav. Dr. Subramanian’s coordinator has received your consented echocardiogram PDF and prepared Quote #qt-501 for your review.",
+      "timestamp": "2026-11-07T08:15:00.000Z"
+    },
+    {
+      "id": "msg-2",
+      "caseId": "case-101",
+      "senderRole": "patient",
+      "senderName": "Aarav Mehta",
+      "recipientHospitalId": "hosp-sg-1",
+      "body": "Thank you. Could you confirm whether the 5-night cardiac ward includes companion seating and airport pickup from Terminal 3?",
+      "timestamp": "2026-11-08T10:42:00.000Z"
+    },
+    {
+      "id": "msg-3",
+      "caseId": "case-101",
+      "senderRole": "provider",
+      "senderName": "Dr. Arvind Subramanian (Coordinator)",
+      "recipientHospitalId": "hosp-sg-1",
+      "body": "Yes, Changi Terminal 3 meet-and-greet is included. Companion day-bed accommodation is available in our private cardiac wing.",
+      "timestamp": "2026-11-08T13:10:00.000Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-311592",
+      "title": "Updated Quotation: Minimally Invasive Structural Valve Repair Package",
+      "detail": "Novena Heart & Proton Medical Center revised proposal QT-501 (USD 21,500).",
+      "timestamp": "2026-11-14T06:22:39.592Z",
+      "read": false,
+      "targetTab": "quotes"
+    },
+    {
+      "id": "ntf-1",
+      "title": "Two quotes ready for comparison",
+      "detail": "Novena Heart Center ($22,400) and Indraprastha Vascular ($11,800) submitted itemized proposals for Case #101.",
+      "timestamp": "2h ago",
+      "read": true,
+      "targetTab": "quotes"
+    },
+    {
+      "id": "ntf-2",
+      "title": "Exploratory video call confirmed",
+      "detail": "Dr. Arvind Subramanian · Nov 16 at 09:30 GMT.",
+      "timestamp": "1d ago",
+      "read": true,
+      "targetTab": "appointments"
+    },
+    {
+      "id": "ntf-3",
+      "title": "Missing administrative item flagged",
+      "detail": "Upload an updated 12-lead ECG PDF before your formal virtual consultation.",
+      "timestamp": "2d ago",
+      "read": true,
+      "targetTab": "records"
+    }
+  ],
+  "contactInquiries": [
+    {
+      "id": "inq-1",
+      "name": "Nadia Al-Khatib",
+      "email": "nadia.desk@alwasl-sample.org",
+      "role": "Hospital / Provider",
+      "country": "UAE",
+      "message": "Interested in connecting our international patient desk to the EthAum CareConnect pilot network.",
+      "createdAt": "2026-11-10T10:30:00.000Z",
+      "status": "Reviewed"
+    }
+  ],
+  "referrals": [
+    {
+      "id": "ref-01",
+      "caseReference": "CC-2026-4101",
+      "hospitalName": "Novena Heart & Proton Medical Center (Sample)",
+      "partnerName": "UK Cardiology Liaison Partner (Demo)",
+      "eligibleBilledUsd": 22400,
+      "commissionRatePct": 5,
+      "commissionAmountUsd": 1120,
+      "status": "Pending Treatment Completion",
+      "termsNote": "5% referral commission applies only on eligible billed amounts after verified booking & payment per EthAum terms."
+    },
+    {
+      "id": "ref-02",
+      "caseReference": "CC-2026-3988",
+      "hospitalName": "Munich Precision Surgical Institute (Sample)",
+      "partnerName": "Direct Platform Referral",
+      "eligibleBilledUsd": 16800,
+      "commissionRatePct": 5,
+      "commissionAmountUsd": 840,
+      "status": "Projected Demo",
+      "termsNote": "Sample projection — payout settlement requires connected payment gateway."
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud-b43605",
+      "timestamp": "2026-11-14T06:22:39.646Z",
+      "actorEmail": "admin@careconnect.demo",
+      "actorRole": "admin",
+      "action": "LOGIN",
+      "resource": "admin"
+    },
+    {
+      "id": "aud-38c0aa",
+      "timestamp": "2026-11-14T06:22:39.597Z",
+      "actorEmail": "provider@careconnect.demo",
+      "actorRole": "provider",
+      "action": "UPDATE_PROVIDER_LISTING",
+      "resource": "hosp-sg-1"
+    },
+    {
+      "id": "aud-75a848",
+      "timestamp": "2026-11-14T06:22:39.592Z",
+      "actorEmail": "provider@careconnect.demo",
+      "actorRole": "provider",
+      "action": "UPDATE_TREATMENT_QUOTE",
+      "resource": "qt-501 (USD 21500)"
+    },
+    {
+      "id": "aud-96d3dd",
+      "timestamp": "2026-11-14T06:22:39.581Z",
+      "actorEmail": "provider@careconnect.demo",
+      "actorRole": "provider",
+      "action": "LOGIN",
+      "resource": "provider"
+    },
+    {
+      "id": "aud-3de83f",
+      "timestamp": "2026-11-14T06:22:39.533Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "DELETE_MEDICAL_DOCUMENT",
+      "resource": "smoke_test_report.pdf"
+    },
+    {
+      "id": "aud-feaaa9",
+      "timestamp": "2026-11-14T06:22:39.528Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "UPLOAD_MEDICAL_DOCUMENT",
+      "resource": "smoke_test_report.pdf (v1.0)"
+    },
+    {
+      "id": "aud-3517a2",
+      "timestamp": "2026-11-14T06:22:39.327Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "UPDATE_USER_PROFILE",
+      "resource": "patient@careconnect.demo"
+    },
+    {
+      "id": "aud-7d10a1",
+      "timestamp": "2026-11-14T06:22:39.321Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "LOGIN",
+      "resource": "patient"
+    },
+    {
+      "id": "aud-30e4a1",
+      "timestamp": "2026-11-13T18:04:49.541Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "UPDATE_MEDICAL_CASE"
+    },
+    {
+      "id": "aud-887369",
+      "timestamp": "2026-11-13T18:04:49.536Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "UPDATE_MEDICAL_CASE"
+    },
+    {
+      "id": "aud-bcc693",
+      "timestamp": "2026-11-13T18:04:49.460Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "LOGIN",
+      "resource": "patient"
+    },
+    {
+      "id": "aud-4cc395",
+      "timestamp": "2026-11-13T18:04:23.659Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "LOGIN",
+      "resource": "patient"
+    },
+    {
+      "id": "aud-8676c1",
+      "timestamp": "2026-11-13T17:57:30.532Z",
+      "actorEmail": "provider@careconnect.demo",
+      "actorRole": "provider",
+      "action": "UPDATE_LEAD_STAGE",
+      "resource": "undefined -> Treatment"
+    },
+    {
+      "id": "aud-88fc22",
+      "timestamp": "2026-11-13T16:29:41.983Z",
+      "actorEmail": "admin@careconnect.demo",
+      "actorRole": "admin",
+      "action": "UPDATE_PROVIDER_VERIFICATION",
+      "resource": "hosp-tr-1 -> sample"
+    },
+    {
+      "id": "aud-ce2679",
+      "timestamp": "2026-11-13T16:29:41.975Z",
+      "actorEmail": "admin@careconnect.demo",
+      "actorRole": "admin",
+      "action": "UPDATE_PROVIDER_VERIFICATION",
+      "resource": "hosp-tr-1 -> verified"
+    },
+    {
+      "id": "aud-2113b1",
+      "timestamp": "2026-11-13T16:29:41.969Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "CREATE_MEDICAL_CASE",
+      "resource": "CC-2026-6591"
+    },
+    {
+      "id": "aud-804265",
+      "timestamp": "2026-11-13T16:29:41.696Z",
+      "actorEmail": "admin@careconnect.demo",
+      "actorRole": "admin",
+      "action": "LOGIN",
+      "resource": "admin"
+    },
+    {
+      "id": "aud-3a84f9",
+      "timestamp": "2026-11-13T16:29:41.628Z",
+      "actorEmail": "provider@careconnect.demo",
+      "actorRole": "provider",
+      "action": "LOGIN",
+      "resource": "provider"
+    },
+    {
+      "id": "aud-4b3288",
+      "timestamp": "2026-11-13T16:29:41.557Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "LOGIN",
+      "resource": "patient"
+    },
+    {
+      "id": "aud-1",
+      "timestamp": "2026-11-11T14:35:00.000Z",
+      "actorEmail": "patient@careconnect.demo",
+      "actorRole": "patient",
+      "action": "GRANT_DOCUMENT_CONSENT",
+      "resource": "doc-901 -> hosp-sg-1"
+    },
+    {
+      "id": "aud-2",
+      "timestamp": "2026-11-08T12:20:00.000Z",
+      "actorEmail": "provider@careconnect.demo",
+      "actorRole": "provider",
+      "action": "PUBLISH_QUOTATION",
+      "resource": "qt-501 (Case CC-2026-4101)"
+    }
+  ]
+}

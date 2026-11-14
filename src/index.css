@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+    --cc-bg-primary: #070B18;
+    --cc-bg-secondary: #0B1224;
+    --cc-bg-card: #101A30;
+    --cc-bg-elevated: #14213B;
+    --cc-cyan: #39DDF5;
+    --cc-blue: #477BFF;
+    --cc-violet: #9272FF;
+    --cc-text-primary: #F5F8FF;
+    --cc-text-secondary: #9BAAC2;
+    --cc-border: rgba(135, 180, 230, 0.15);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--cc-bg-primary);
+    color: var(--cc-text-primary);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.bg-editorial-grid {
+  background-image:
+    linear-gradient(to right, rgba(135, 180, 230, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(135, 180, 230, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Subtle custom scrollbars for dark clinical surfaces */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070B18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(135, 180, 230, 0.22);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 221, 245, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  aside, header, button {
+    display: none !important;
+  }
+}
