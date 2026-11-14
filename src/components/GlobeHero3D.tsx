@@ -218,8 +218,8 @@ function HubMarker({ hub, isSelected, isHovered, onSelect, onHover }: HubMarkerP
       </mesh>
 
       {(isHovered || isSelected) && (
-        <Html position={[0, 0.25, 0]} center distanceFactor={8} style={{ pointerEvents: 'none' }}>
-          <div className="whitespace-nowrap rounded-lg border border-[#39DDF5]/40 bg-[#070B18]/95 px-2.5 py-1 text-[11px] font-medium text-white shadow-lg">
+        <Html position={[0, 0.25, 0]} center distanceFactor={8} style={{ pointerEvents: 'none' }} zIndexRange={[100, 0]}>
+          <div key={hub.id} className="whitespace-nowrap rounded-lg border border-[#39DDF5]/40 bg-[#070B18]/95 px-2.5 py-1 text-[11px] font-medium text-white shadow-lg">
             <span className="text-[#39DDF5]">{hub.city}</span> · {hub.country}
           </div>
         </Html>
